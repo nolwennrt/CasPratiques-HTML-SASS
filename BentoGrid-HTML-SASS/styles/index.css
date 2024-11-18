@@ -16,26 +16,38 @@ h1 {
   all: unset;
   font-size: 3.5rem;
   line-height: 3rem;
-  font-weight: 500;
+  letter-spacing: 0;
   color: white;
   text-align: center;
-  margin-bottom: 2rem;
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  h1 {
+    font-size: calc(3.5rem - 4px);
+  }
 }
 
 h2 {
   all: unset;
   font-size: 2.3rem;
-  letter-spacing: -2px;
   line-height: 2rem;
-  font-weight: 500;
+  letter-spacing: -2px;
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  h2 {
+    font-size: calc(2.3rem - 4px);
+  }
 }
 
 h3 {
   all: unset;
   font-size: 1.7rem;
-  letter-spacing: -1.5px;
   line-height: 1.5rem;
-  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  h3 {
+    font-size: calc(1.7rem - 4px);
+  }
 }
 
 body {
@@ -52,7 +64,7 @@ main {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: repeat(10, minmax(0, 1fr));
   gap: 1rem;
-  background-color: red;
+  background-color: blue;
   height: 48rem;
 }
 @media screen and (max-width: 1000px) {
@@ -76,7 +88,7 @@ div {
   grid-area: 1/1/6/2;
 }
 .create-post img {
-  width: 95%;
+  width: 100%;
   margin-top: 1.5rem;
 }
 .create-post span {
@@ -87,13 +99,23 @@ div {
 .faster {
   background-color: hsl(256, 67%, 59%);
   grid-area: 1/2/5/4;
+  justify-content: center;
 }
 .faster img {
   height: 2rem;
+  margin-top: 1.5rem;
 }
 .faster p {
   color: white;
   margin-top: 0.5rem;
+  font-size: 17px;
+  line-height: none;
+  letter-spacing: none;
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .faster p {
+    font-size: calc(17px - 4px);
+  }
 }
 .faster .color {
   color: hsl(39, 100%, 71%);
@@ -111,6 +133,21 @@ div {
   margin: 1.3rem 0;
   align-self: flex-start;
 }
+@media screen and (max-width: 900px) {
+  .stats img {
+    height: 10rem;
+  }
+}
+.stats p {
+  font-size: 17px;
+  line-height: none;
+  letter-spacing: none;
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .stats p {
+    font-size: calc(17px - 4px);
+  }
+}
 
 .content {
   background-color: hsl(39, 100%, 71%);
@@ -120,6 +157,11 @@ div {
 .content img {
   height: 12rem;
   align-self: center;
+}
+@media screen and (max-width: 900px) {
+  .content img {
+    height: 8rem;
+  }
 }
 
 .accounts {
@@ -131,6 +173,11 @@ div {
   height: 3.7rem;
   align-self: flex-start;
 }
+@media screen and (max-width: 900px) {
+  .accounts img {
+    height: 2.5rem;
+  }
+}
 
 .consistent {
   background-color: hsl(39, 100%, 71%);
@@ -141,19 +188,51 @@ div {
   height: 9rem;
   margin-top: 1rem;
 }
+@media screen and (max-width: 900px) {
+  .consistent img {
+    height: 5.5rem;
+  }
+}
 
 .audience {
   background-color: white;
   grid-area: 8/2/11/3;
   align-items: flex-start;
-  justify-content: space-between;
-  text-wrap: nowrap;
+  justify-content: space-around;
 }
 .audience img {
   height: 4rem;
 }
+@media screen and (max-width: 900px) {
+  .audience img {
+    height: 2rem;
+  }
+}
 .audience h2 {
   font-size: 3.5rem;
+  line-height: none;
+  letter-spacing: none;
+  font-weight: 500;
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .audience h2 {
+    font-size: calc(3.5rem - 4px);
+  }
+}
+@media screen and (max-width: 900px) {
+  .audience h2 {
+    font-size: 2.5rem;
+  }
+}
+.audience p {
+  font-size: 16px;
+  line-height: none;
+  letter-spacing: none;
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .audience p {
+    font-size: calc(16px - 4px);
+  }
 }
 
 .followers {
@@ -166,8 +245,50 @@ div {
   height: 11rem;
   margin-right: 0.5rem;
 }
+@media screen and (max-width: 900px) {
+  .followers img {
+    height: 8rem;
+  }
+}
 .followers h2 {
-  font-weight: 500;
-  letter-spacing: -1px;
   font-size: 2.2rem;
+  line-height: 2rem;
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .followers h2 {
+    font-size: calc(2.2rem - 4px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(31, 1fr);
+    height: 100%;
+  }
+  .faster {
+    grid-area: 1/1/5/2;
+  }
+  .accounts {
+    grid-area: 5/1/7/2;
+  }
+  .consistent {
+    grid-area: 7/1/10/2;
+  }
+  .stats {
+    grid-area: 10/1/16/2;
+  }
+  .followers {
+    grid-area: 16/1/21/2;
+  }
+  .audience {
+    grid-area: 21/1/24/2;
+  }
+  .create-post {
+    grid-area: 24/1/27/2;
+  }
+  .content {
+    grid-area: 27/1/32/2;
+  }
 }/*# sourceMappingURL=index.css.map */

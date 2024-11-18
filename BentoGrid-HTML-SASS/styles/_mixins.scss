@@ -4,29 +4,6 @@
     color: black;
 }
 
-@mixin titre {
-    font-size: 3.5rem;
-    line-height: 3rem;
-    font-weight: 500;
-    color: white;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-@mixin titre2 {
-    font-size: 2.3rem;
-    letter-spacing: -2px;
-    line-height: 2rem;
-    font-weight: 500;
-}
-
-@mixin titre3 {
-    font-size: 1.7rem;
-    letter-spacing: -1.5px;
-    line-height: 1.5rem;
-    font-weight: 500;
-}
-
 @mixin responsive-grid($column , $row) {
     grid-template-columns: $column;
     grid-template-rows: $row;
