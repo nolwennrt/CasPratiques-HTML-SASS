@@ -15,7 +15,8 @@
         font-size: calc(#{$size} - 4px);
     }
 
-    // @media screen and (max-width: 700px) {
-    //     font-size: calc(#{$size} - 10px);
-    // }
+     @media screen and (max-width: 700px) {
+         font-size: calc(#{$size} - 4px);
+         text-wrap: balance;
+     }
 }

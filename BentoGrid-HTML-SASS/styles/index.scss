@@ -46,7 +46,6 @@ main {
     display: grid;
     @include responsive-grid((repeat(4,minmax(0, 1fr))), (repeat(10,minmax(0, 1fr))));
     gap: 1rem;
-    background-color: blue;
     height: 48rem;
 }
 
@@ -61,6 +60,15 @@ div {
     img {
         width: 100%;
         margin-top: 1.5rem;
+
+        @media screen and (max-width: 700px) {
+            width: 30%;
+            align-self: flex-start;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 50%;
+        }
     }
 
     span {
@@ -77,6 +85,10 @@ div {
     img {
         height: 2rem;
         margin-top: 1.5rem;
+
+        @media screen and (max-width: 700px) {
+            height: 1.5rem;
+        }
     }
 
     p {
@@ -103,14 +115,26 @@ div {
         margin: 1.3rem 0;
         align-self: flex-start;
 
-        @media screen and (max-width : 900px) {
+        @media screen and (min-width: 700px) and (max-width : 900px) {
             height: 10rem;
+        }
+
+        @media screen and (max-width: 700px) {
+            height: auto;
+            width: 100%;
+            align-self: center;
+            
         }
     }
 
     p {
         @include TextVar(17px, none, none);
     }
+
+    @media screen and (max-width: 700px) {
+        text-align: center;
+    }
+
 }
 
 .content {
@@ -125,7 +149,15 @@ div {
         @media screen and (max-width: 900px) {
             height: 8rem;
         }
+
+        @media screen and (max-width: 700px) {
+            height: 12rem;
+            align-self: flex-start;
+            margin-top: 1.5rem;
+        }
     }
+
+
 }
 
 .accounts {
@@ -140,6 +172,11 @@ div {
         @media screen and (max-width: 900px) {
             height: 2.5rem;
         }
+
+        @media screen and (max-width: 700px) {
+            height: 3.5rem;
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -147,6 +184,7 @@ div {
     background-color: $darkyellow;
     grid-area: 5/3/8/4;
     justify-content: space-between;
+    height: 100%;
 
     img {
         height: 9rem;
@@ -155,6 +193,15 @@ div {
         @media screen and (max-width: 900px) {
             height: 5.5rem;
         }
+
+        @media screen and (max-width: 700px) {
+            height: 9rem;
+            align-self: flex-start;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        padding-bottom: 0;
     }
 }
 
@@ -171,6 +218,10 @@ div {
         @media screen and (max-width: 900px) {
             height: 2rem;
         }
+
+        @media screen and (max-width: 700px) {
+            height: 4rem;
+        }
     }
 
     h2 {
@@ -184,6 +235,15 @@ div {
 
     p {
         @include TextVar(16px, none, none);
+        
+        @media screen and (max-width: 700px) {
+            margin: 1rem 0;
+        }
+
+    }
+
+    @media screen and (max-width: 700px) {
+        justify-content: space-between;
     }
 }
 
@@ -201,48 +261,67 @@ div {
         @media screen and (max-width: 900px) {
             height: 8rem;
         }
+
+        @media screen and (max-width: 700px) {
+            height: 9rem;
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
     }
 
     h2 {
         @include TextVar(2.2rem, 2rem, -1px);
     }
+
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 700px) {
     main {
-        @include responsive-grid((1fr), (repeat(31, 1fr)));
+        @include responsive-grid((1fr), (repeat(8, auto)));
         height: 100%;
     }
 
     .faster {
-        grid-area: 1/1/5/2;
+        grid-area: 1/1/2/2;
     }
 
     .accounts {
-        grid-area: 5/1/7/2;
+        grid-area: 2/1/3/2;
+        align-items: flex-start;
     }
 
     .consistent {
-        grid-area: 7/1/10/2 ;
+        grid-area: 3/1/4/2 ;
+        align-items: flex-start;
     }
 
     .stats {
-        grid-area: 10/1/16/2;
+        grid-area: 4/1/5/2;
     }
 
     .followers {
-        grid-area: 16/1/21/2;
+        grid-area: 5/1/6/2;
     }
 
     .audience {
-        grid-area: 21/1/24/2;
+        grid-area: 6/1/7/2;
     }
 
     .create-post {
-        grid-area: 24/1/27/2;
+        grid-area: 7/1/8/2;
+        align-items: flex-start;
     }
 
     .content {
-        grid-area: 27/1/32/2;
+        grid-area: 8/1/9/2;
+        align-items: flex-start;
     }
+}
+
+.attribution {
+    flex-direction: row;
 }
