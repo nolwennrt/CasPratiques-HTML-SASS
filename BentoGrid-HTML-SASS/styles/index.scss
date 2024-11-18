@@ -1,0 +1,169 @@
+@import 'mixins';
+@import 'responsive';
+@import 'variables';
+
+@font-face {
+    font-family: "DM" ;
+    src: url(/assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "DMItalic";
+    src: url(/assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    all: unset;
+    @include titre;
+}
+
+h2 {
+    all: unset;
+    @include titre2;
+}
+
+h3 {
+    all: unset;
+    @include titre3;
+}
+
+body {
+    background-color: hsl(0, 0%, 96%);
+    @include Text;
+}
+
+main {
+    @include responsive-width(60rem, 90%);
+    margin: 2rem auto;
+    display: grid;
+    @include responsive-grid((repeat(4,minmax(0, 1fr))), (repeat(10,minmax(0, 1fr))));
+    gap: 1rem;
+    background-color: red;
+    height: 48rem;
+}
+
+div {
+    @include Box;
+}
+
+.create-post {
+    background-color: $yellow;
+    grid-area: 1/1/6/2;
+
+    img {
+        width: 95%;
+        margin-top: 1.5rem;
+    }
+
+    span {
+        color: $darkpurple;
+        font-family: $italic;
+    }
+}
+
+.faster {
+    background-color: $darkpurple;
+    grid-area: 1/2/5/4;
+
+    img {
+        height: 2rem;
+    }
+
+    p {
+        color: white;
+        margin-top: 0.5rem;
+    }
+
+    .color {
+        color: $darkyellow;
+    }
+
+    .italic {
+        font-family: $italic;
+    }
+}
+
+.stats {
+    background-color: $purple;
+    grid-area: 1/4/8/5;
+
+    img {
+        height: 18rem;
+        margin: 1.3rem 0;
+        align-self: flex-start;
+    }
+}
+
+.content {
+    background-color: $darkyellow;
+    grid-area: 6/1/11/2;
+    justify-content: space-between;
+
+    img {
+        height: 12rem;
+        align-self: center;
+    }
+}
+
+.accounts {
+    background-color: white;
+    grid-area: 5/2/8/3;
+    justify-content: space-between;
+
+    img {
+        height: 3.7rem;
+        align-self: flex-start;
+    }
+}
+
+.consistent {
+    background-color: $darkyellow;
+    grid-area: 5/3/8/4;
+    justify-content: space-between;
+
+    img {
+        height: 9rem;
+        margin-top: 1rem;
+    }
+}
+
+.audience {
+    background-color: white;
+    grid-area: 8/2/11/3;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-wrap: nowrap;
+
+    img {
+        height: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+}
+
+.followers {
+    background-color: $darkpurple;
+    grid-area: 8/3/11/5;
+    flex-direction: row;
+    color: white;
+
+
+    img {
+        height: 11rem;
+        margin-right: 0.5rem;
+    }
+
+    h2 {
+        font-weight: 500;
+        letter-spacing: -1px;
+        font-size: 2.2rem;
+    }
+}

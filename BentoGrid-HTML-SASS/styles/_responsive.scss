@@ -1,0 +1,8 @@
+@mixin responsive-width($width, $max-width) {
+    width: $width;
+
+    @media screen and (max-width: 1000px) {
+        width: $max-width;
+    }
+}
+
