@@ -22,7 +22,6 @@
 
 body {
   background-color: hsl(210, 46%, 95%);
-  background-color: red;
 }
 
 main {
@@ -34,10 +33,23 @@ main {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 1.5rem;
 }
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 1rem;
+  }
+}
 
 section {
   border-radius: 10px;
   padding: 1.5rem;
+}
+@media screen and (max-width: 600px) {
+  section {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 section .info {
   display: flex;
@@ -100,23 +112,52 @@ section img {
   background-position: 80% 0;
   grid-area: 1/1/2/3;
 }
+@media screen and (max-width: 600px) {
+  .daniel {
+    grid-area: 1/1/2/2;
+  }
+}
 
 .jonathan {
   background-color: hsl(217, 19%, 35%);
   grid-area: 1/3/2/4;
+}
+@media screen and (max-width: 600px) {
+  .jonathan {
+    grid-area: 2/1/3/2;
+  }
 }
 
 .jeanette {
   background-color: white;
   grid-area: 2/1/3/2;
 }
+@media screen and (max-width: 600px) {
+  .jeanette {
+    grid-area: 3/1/4/2;
+  }
+}
 
 .patrick {
   background-color: hsl(219, 29%, 14%);
   grid-area: 2/2/3/4;
 }
+@media screen and (max-width: 600px) {
+  .patrick {
+    grid-area: 4/1/5/2;
+  }
+}
 
 .kira {
   background-color: white;
   grid-area: 1/4/3/5;
+}
+@media screen and (max-width: 600px) {
+  .kira {
+    grid-area: 5/1/6/2;
+  }
+}
+
+footer {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

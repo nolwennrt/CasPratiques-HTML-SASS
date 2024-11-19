@@ -4,6 +4,10 @@
     border-radius: 10px;
     padding: 1.5rem;
 
+    @media screen and (max-width: 600px) {
+        height: fit-content;
+    }
+
     .info {
         display: flex;
         align-items: center;
