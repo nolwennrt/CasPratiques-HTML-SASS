@@ -22,23 +22,22 @@
 
 body {
   background-color: hsl(210, 46%, 95%);
-  font-family: "BarlowRegular", sans-serif;
-  font-size: 13px;
+  background-color: red;
 }
 
 main {
-  height: -moz-fit-content;
-  height: fit-content;
   margin: 4rem auto;
+  max-width: 95%;
+  width: 60rem;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(2, 50%);
-  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5rem;
 }
 
 section {
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 section .info {
   display: flex;
@@ -54,6 +53,8 @@ section img {
 .jonathan p,
 .patrick p {
   color: white;
+  font-size: 13px;
+  font-family: "BarlowRegular", sans-serif;
 }
 .daniel .graduate,
 .jonathan .graduate,
@@ -64,29 +65,31 @@ section img {
 .daniel .light,
 .jonathan .light,
 .patrick .light {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
 .daniel .bold,
 .jonathan .bold,
 .patrick .bold {
   font-family: "BarlowSemiBold", sans-serif;
-  font-size: 17px;
+  font-size: 18.5px;
   margin: 1rem 0;
 }
 
 .jeanette p, .kira p {
   color: hsl(217, 19%, 35%);
+  font-size: 13px;
+  font-family: "BarlowRegular", sans-serif;
 }
 .jeanette .graduate, .kira .graduate {
   color: rgba(72, 85, 106, 0.5);
   font-size: 11px;
 }
 .jeanette .light, .kira .light {
-  color: rgba(72, 85, 106, 0.7);
+  color: rgba(72, 85, 106, 0.6);
 }
 .jeanette .bold, .kira .bold {
   font-family: "BarlowSemiBold", sans-serif;
-  font-size: 17px;
+  font-size: 18.5px;
   margin: 1rem 0;
 }
 

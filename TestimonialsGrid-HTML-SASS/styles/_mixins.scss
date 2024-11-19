@@ -1,24 +1,28 @@
+// Mixin relatif au format des sections //
 
 @mixin section {
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1.5rem;
+
+    .info {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        border-radius: 50%;
+        height: 2.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
-@mixin section-info {
-    display: flex;
-    align-items: center;
-}
-
-@mixin section-image {
-    border-radius: 50%;
-    height: 2.5rem;
-    margin-right: 1.5rem;
-}
-
+// Mixin pour les variables de textes, inclues dans les sections //
 
 @mixin textcolor($text-color) {
     p {
         color: $text-color;
+        font-size: 13px;
+        font-family: $regular;
     }
 
     .graduate {
@@ -27,12 +31,12 @@
     }
 
     .light {
-        color: rgba($text-color, 0.7);
+        color: rgba($text-color, 0.6);
     }
 
     .bold {
         font-family: $semibold;
-        font-size: 17px;
+        font-size: 18.5px;
         margin: 1rem 0;
     }
 }
