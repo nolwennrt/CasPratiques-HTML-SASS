@@ -1,0 +1,38 @@
+
+@mixin section {
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+@mixin section-info {
+    display: flex;
+    align-items: center;
+}
+
+@mixin section-image {
+    border-radius: 50%;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+}
+
+
+@mixin textcolor($text-color) {
+    p {
+        color: $text-color;
+    }
+
+    .graduate {
+        color: rgba($text-color, 0.5);
+        font-size: 11px;
+    }
+
+    .light {
+        color: rgba($text-color, 0.7);
+    }
+
+    .bold {
+        font-family: $semibold;
+        font-size: 17px;
+        margin: 1rem 0;
+    }
+}

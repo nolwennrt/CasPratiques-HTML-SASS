@@ -1,0 +1,88 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    // background-color: red;
+    font-family: $regular;
+    font-size: 13px;
+}
+
+main {
+    height: fit-content;
+    // width: 80%;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 50%);
+    grid-gap: 2rem;
+}
+
+
+// Styles identitques card //
+
+section {
+
+    @include section;
+
+
+    .info {
+        @include section-info;
+    }
+
+    img {
+        @include section-image;
+    }
+
+}
+
+.daniel,
+.jonathan,
+.patrick {
+    $text-color: white;
+    @include textcolor($text-color);   
+}
+
+.jeanette,.kira {
+    $text-color: $lightgray;
+    @include textcolor ($text-color);    
+}
+
+
+// Styles individuels // 
+
+.daniel {
+    background-color: $violet;
+    background-image: url(/assets/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+    grid-area: 1/1/2/3;
+}
+
+.jonathan {
+    background-color: $lightgray;
+    grid-area: 1/3/2/4;
+}
+
+.jeanette {
+    background-color: $whitebg;
+    grid-area: 2/1/3/2;
+}
+
+.patrick {
+    background-color: $darkgray;
+    grid-area: 2/2/3/4;
+}
+
+.kira {
+    background-color: $whitebg;
+    grid-area: 1/4/3/5 ;
+}
