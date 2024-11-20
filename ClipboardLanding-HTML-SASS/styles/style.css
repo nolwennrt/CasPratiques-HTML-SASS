@@ -68,10 +68,18 @@ main section .ios {
   background-color: hsl(171, 66%, 44%);
   box-shadow: 0 3px 0 hsl(171, 65%, 34%), 0 6px 10px hsla(171, 75%, 54%, 0.578);
 }
+main section .ios:hover {
+  background-color: hsl(171, 57%, 56%);
+  box-shadow: 0 3px 0 hsl(171, 64%, 43%), 0 6px 10px hsla(171, 75%, 54%, 0.578);
+}
 main section .mac {
   background-color: hsl(233, 100%, 69%);
   box-shadow: 0 3px 0 hsl(233, 44%, 45%), 0 6px 10px hsla(233, 81%, 65%, 0.588);
   margin-left: 1rem;
+}
+main section .mac:hover {
+  background-color: hsl(233, 91%, 74%);
+  box-shadow: 0 3px 0 hsl(233, 60%, 61%), 0 6px 10px hsla(233, 81%, 65%, 0.588);
 }
 main .title img {
   width: 7rem;
@@ -158,11 +166,18 @@ footer .links ul a {
   text-decoration: none;
   color: hsl(210, 10%, 33%);
 }
+footer .links ul a:hover {
+  color: hsl(171, 66%, 44%);
+}
 footer .social-media {
   width: 10%;
   display: flex;
   justify-content: space-between;
 }
-footer .social-media img {
-  width: 1.5rem;
+footer .social-media i {
+  color: hsl(210, 10%, 33%);
+  cursor: pointer;
+}
+footer .social-media i:hover {
+  color: hsl(171, 66%, 44%);
 }/*# sourceMappingURL=style.css.map */

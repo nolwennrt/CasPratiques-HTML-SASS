@@ -137,6 +137,10 @@ footer {
                 text-decoration: none;
                 color: $title-color;
             }
+
+            a:hover {
+                color: $cyan;
+            }
             
         }
     }
@@ -145,8 +149,14 @@ footer {
         width: 10%;
         display: flex;
         justify-content: space-between;
-        img {
-            width: 1.5rem;
+
+        i {
+            color: $title-color;
+            cursor: pointer;
+        }
+
+        i:hover {
+            color: $cyan;
         }
     }
     
