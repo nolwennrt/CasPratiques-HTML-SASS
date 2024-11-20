@@ -61,10 +61,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 8rem;
+    padding-right: 8rem;
     margin-bottom: 8rem;
 
     p {
         width: 55%;
         line-height: 2rem;
+    }
+
+    @media screen and (max-width: 1300px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }

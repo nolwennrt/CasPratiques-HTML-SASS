@@ -22,8 +22,6 @@ body {
 }
 
 main {
-    padding: 8rem 8rem 0 8rem;
-
     section {
         @include section;
         @include buttons;
@@ -31,7 +29,7 @@ main {
 
 
     .title {
-        
+        padding-top: 8rem;
         img {
             width: 7rem;
             margin-bottom: 3.5rem
@@ -52,12 +50,12 @@ main {
 
             img {
                 position: relative;
-                left: -9.5rem;
+                left: -10rem;
             }
 
             .list {
                 position: relative;
-                left: -2rem;
+                left: -4rem;
 
                 p {
                     font-size: 18px;
@@ -66,7 +64,17 @@ main {
                 }
             }
 
+             @media screen and (max-width: 1300px) {
+                img {
+                    width: 60%;
+                }
+
+                .list {
+                    width: 40%;
+                }
+             }
         }
+
     }
 
     .access {
@@ -74,6 +82,12 @@ main {
 
         img {
             margin-top: 5rem;
+        }
+
+        @media screen and (max-width: 950px) {
+            img {
+                width: 80%;
+            }
         }
     }
 
@@ -106,6 +120,12 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @media screen and (max-width: 950px) {
+            img {
+                width: 7rem;
+            }
+        }
     }
 }
 
@@ -132,6 +152,7 @@ footer {
             grid-gap: 1rem;
             text-align: left;
             margin-left: 10rem;
+            margin-right: 10rem;
     
             a {
                 text-decoration: none;
@@ -140,6 +161,17 @@ footer {
 
             a:hover {
                 color: $cyan;
+            }
+
+            @media screen and (max-width: 1200px) {
+                grid-template-columns: repeat(3, 30%);
+                margin-left: 5rem;
+                margin-right: 5rem;
+            }
+
+            @media screen and (max-width: 950px) {
+                margin-left: 1rem;
+                margin-right: 1rem;
             }
             
         }
