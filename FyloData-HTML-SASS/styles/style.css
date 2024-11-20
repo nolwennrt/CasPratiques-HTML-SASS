@@ -31,10 +31,26 @@ body .big-bold {
   color: hsl(229, 57%, 11%);
   margin-right: 0.5rem;
 }
+@media screen and (max-width: 345px) {
+  body .big-bold {
+    font-size: 30px;
+  }
+}
 body .gray {
   color: hsl(229, 7%, 55%);
   font-weight: 700;
   font-size: 12px;
+}
+@media screen and (max-width: 345px) {
+  body .gray {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(/assets/images/bg-mobile.png);
+    background-size: cover;
+  }
 }
 
 main {
@@ -49,6 +65,14 @@ main {
 @media screen and (max-width: 1275px) {
   main {
     width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -72,6 +96,12 @@ main {
   width: 3rem;
   border-radius: 10px;
   margin-right: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .icon {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .storage {
@@ -131,6 +161,16 @@ main {
   padding: 0.8rem 1.5rem;
   border-radius: 10px 10px 0 10px;
 }
+@media screen and (max-width: 768px) {
+  .storage .bubble {
+    top: unset;
+    transform: unset;
+    right: unset;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    border-radius: 10px;
+  }
+}
 .storage .bubble::after {
   content: "";
   position: absolute;
@@ -139,6 +179,18 @@ main {
   margin-top: -5px;
   border-top: 30px solid white;
   border-left: 30px solid transparent;
+}
+@media screen and (max-width: 768px) {
+  .storage .bubble::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .storage {
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: 3rem;
+  }
 }
 
 footer {

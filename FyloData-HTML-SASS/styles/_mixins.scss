@@ -15,12 +15,20 @@
         font-size: 35px;
         color: $verydarkblue;
         margin-right: 0.5rem;
+
+        @media screen and (max-width: 345px) {
+            font-size: 30px;
+        }
     }
 
     .gray {
         color: $gray;
         font-weight: 700;
         font-size: 12px;
+
+        @media screen and (max-width: 345px) {
+            font-size: 10px;
+        }
     }
 }
 
