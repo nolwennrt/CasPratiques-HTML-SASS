@@ -13,7 +13,7 @@ body {
   background-image: url(/assets/images/bg-desktop.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 100%;
+  background-size: 100% 50%;
   height: 100vh;
 }
 body p {
@@ -45,6 +45,11 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 1275px) {
+  main {
+    width: 80%;
+  }
 }
 
 .icon {
@@ -90,7 +95,7 @@ main {
   background-color: hsl(229, 57%, 11%);
 }
 .storage .cursor .cursor-complete .cursor-actual {
-  width: 80%;
+  width: 81.5%;
   height: 100%;
   background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   border-radius: 50px;
