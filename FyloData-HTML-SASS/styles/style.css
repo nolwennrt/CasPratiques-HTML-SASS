@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Raleway";
-  src: url(/assets/fonts/Raleway-VariableFont_wght.ttf);
+  src: url(../assets/fonts/Raleway-VariableFont_wght.ttf);
 }
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@
 
 body {
   background-color: hsl(229, 57%, 11%);
-  background-image: url(/assets/images/bg-desktop.png);
+  background-image: url(../assets/images/bg-desktop.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 50%;
@@ -48,7 +48,7 @@ body .gray {
 }
 @media screen and (max-width: 768px) {
   body {
-    background-image: url(/assets/images/bg-mobile.png);
+    background-image: url(../assets/images/bg-mobile.png);
     background-size: cover;
   }
 }
