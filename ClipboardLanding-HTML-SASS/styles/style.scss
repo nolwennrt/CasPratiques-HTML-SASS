@@ -1,0 +1,98 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 18px;
+    font-family: "BaiRegular", sans-serif;
+    color: $text-color;
+    text-align: center;
+    background-image: url(../assets/images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    @include titles;
+    // background-color: red;
+}
+
+main {
+    padding: 8rem;
+
+    section {
+        @include section;
+    }
+
+
+    .title {
+        margin-bottom: 10rem;
+        
+        img {
+            width: 6rem;
+            margin-bottom: 2rem
+        }
+
+    }
+
+    .track {
+        margin-bottom: 10rem;
+        width: 100%;
+        position: relative;
+
+        .desktop {
+            display: flex;
+            text-align: left;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5rem;
+
+            img {
+                position: relative;
+                left: -9.5rem;
+            }
+
+            .list {
+                position: relative;
+                left: -2rem;
+
+                p {
+                    font-size: 18px;
+                    width: 90%;
+                    margin-bottom: 4.5rem;
+                }
+            }
+
+        }
+    }
+
+    // .track {
+    //     // width: 55%;
+    //     margin-bottom: 10rem;
+
+    //     .desktop {
+    //         display: flex;
+
+
+
+    //         // img {
+    //         //     position: relative;
+    //         //     left: -450px;
+    //         // }
+
+    //     }
+    // }
+
+}
+
+.buttons {
+    @include buttons;
+}
+
+
+
+

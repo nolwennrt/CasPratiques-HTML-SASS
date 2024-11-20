@@ -1,0 +1,57 @@
+@mixin buttons {
+    button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-family: $title;
+        font-size: 18px;
+        border-radius: 30px;
+        padding: 1rem 2rem;
+        margin-top: 3rem;
+    } 
+
+    .ios {
+        background-color: $cyan;
+        box-shadow: (0 3px 0 hsl(171, 65%, 34%)), (0 6px 10px hsla(171, 75%, 54%, 0.578));
+    }
+
+    .mac {
+        background-color: $blue;
+        box-shadow: (0 3px 0 hsl(233, 44%, 45%)), (0 6px 10px hsla(233, 81%, 65%, 0.588) );
+    }
+}
+
+@mixin titles {
+    h1 {
+        font-family: "BaiMedium", sans-serif;
+        color: $title-color;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-family: "BaiMedium", sans-serif;
+        color: $title-color;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-family: "BaiMedium", sans-serif;
+        color: $title-color;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@mixin section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        width: 60%;
+    }
+}
