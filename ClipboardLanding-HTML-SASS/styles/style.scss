@@ -18,7 +18,11 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0;
     @include titles;
-    //background-color: red;
+
+    @media screen and (max-width: 768px) {
+        background-image: url(../assets/images/bg-header-mobile.png);
+        background-size: contain;
+    }
 }
 
 main {
@@ -27,7 +31,6 @@ main {
         @include buttons;
     }
 
-
     .title {
         padding-top: 8rem;
         img {
@@ -35,6 +38,9 @@ main {
             margin-bottom: 3.5rem
         }
 
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     .track {
@@ -72,7 +78,29 @@ main {
                 .list {
                     width: 40%;
                 }
-             }
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                margin-top: 3rem;
+
+                img {
+                    left: 0;
+                    width: 90%;
+                }
+
+                .list {
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 3rem;
+
+                    p {
+                        width: 100%;
+                        margin-bottom: 2.5rem;
+                    }
+                }
+            }
         }
 
     }
@@ -84,7 +112,7 @@ main {
             margin-top: 5rem;
         }
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1300px) {
             img {
                 width: 90%;
             }
@@ -93,6 +121,14 @@ main {
         @media screen and (max-width: 950px) {
             img {
                 width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 3rem;
+            
+            img {
+                margin-top: 3rem;
             }
         }
     }
@@ -119,6 +155,20 @@ main {
                     width: 100%;
                 }
             }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 3rem;
+
+                .tools-content {
+                    width: 100%;
+                }
+
+                .tools-content:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
+            }
         }
     }
 
@@ -132,7 +182,28 @@ main {
                 width: 7rem;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 5rem;
+
+            img {
+                width: 9rem;
+            }
+
+            img:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
     }
+
+    @media screen and (max-width: 768px) {
+       .buttons {
+        width: 100%;
+       }     
+    }
+
 }
 
 footer {
@@ -169,7 +240,7 @@ footer {
                 color: $cyan;
             }
 
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 1300px) {
                 grid-template-columns: repeat(3, 30%);
                 margin-left: 5rem;
                 margin-right: 5rem;
@@ -196,6 +267,39 @@ footer {
         i:hover {
             color: $cyan;
         }
+
+        @media screen and (max-width: 950px) {
+            width: 20%;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        flex-direction: column;
+
+        img {
+            width: 2.5rem;
+        }
+
+        .links {
+            flex-grow: 0;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 2rem 0;
+            }
+        }
+
+        .social-media {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            justify-content: space-between;
+            width: 45%;
+        }
+
     }
     
 }
