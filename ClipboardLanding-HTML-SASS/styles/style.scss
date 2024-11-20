@@ -18,29 +18,28 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0;
     @include titles;
-    // background-color: red;
+    //background-color: red;
 }
 
 main {
-    padding: 8rem;
+    padding: 8rem 8rem 0 8rem;
 
     section {
         @include section;
+        @include buttons;
     }
 
 
     .title {
-        margin-bottom: 10rem;
         
         img {
-            width: 6rem;
-            margin-bottom: 2rem
+            width: 7rem;
+            margin-bottom: 3.5rem
         }
 
     }
 
     .track {
-        margin-bottom: 10rem;
         width: 100%;
         position: relative;
 
@@ -63,35 +62,97 @@ main {
                 p {
                     font-size: 18px;
                     width: 90%;
-                    margin-bottom: 4.5rem;
+                    margin-bottom: 3.5rem;
                 }
             }
 
         }
     }
 
-    // .track {
-    //     // width: 55%;
-    //     margin-bottom: 10rem;
+    .access {
+        margin-bottom: 4.5rem;
 
-    //     .desktop {
-    //         display: flex;
+        img {
+            margin-top: 5rem;
+        }
+    }
+
+    .supercharge {
+        .tools {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5rem;
+
+            .tools-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 32%;
 
 
+                img {
+                    margin-bottom: 2.5rem;
+                    height: 2.5rem;
+                }
 
-    //         // img {
-    //         //     position: relative;
-    //         //     left: -450px;
-    //         // }
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
 
-    //     }
-    // }
-
+    .logos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
-.buttons {
-    @include buttons;
+footer {
+    height: auto;
+    background-color: rgb(239, 239, 239);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 8rem;
+
+    img {
+        width: 3.5rem;
+    }
+
+    .links {
+        flex-grow: 1;
+
+        ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(3, 20%);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 1rem;
+            text-align: left;
+            margin-left: 10rem;
+    
+            a {
+                text-decoration: none;
+                color: $title-color;
+            }
+            
+        }
+    }
+
+    .social-media {
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 1.5rem;
+        }
+    }
+    
 }
+
+
 
 
 
