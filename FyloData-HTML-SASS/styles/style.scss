@@ -1,0 +1,128 @@
+@import "variables";
+@import "fonts";
+@import "mixins";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $verydarkblue;
+    background-image: url(/assets/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    height: 100vh;
+    @include text;
+}
+
+main {
+    display: flex;
+    max-width: 95%;
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Section logo + icones //
+.icon {
+    background-color: $darkblue;
+    padding: 3rem 2rem;
+    width: 40%;
+    border-radius: 10px 100px 10px 10px;
+
+    .icon-content { // <----- Icones //
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+        @include icon;
+    }
+}
+
+
+// --------- Partie Stockage + Bulle ------ //
+.storage {
+    background-color: $darkblue;
+    padding: 2.5rem;
+    width: 60%;
+    margin-left: 2rem;
+    border-radius: 10px;
+    position: relative;
+    height: 100%;
+    align-self: flex-end;
+// -------- Partie curseur -------//
+    .cursor {
+        margin-top: 1rem;
+
+        .cursor-complete { // <------ Fond du curseur //
+            width: 100%;
+            height: 1.3rem;
+            border-radius: 50px;
+            padding: 3px;
+            background-color: $verydarkblue;
+
+            .cursor-actual { // <-------- Partie avancée du curseur avec dégradé //
+                width: 80%;
+                height: 100%;
+                background: $gradient;
+                border-radius: 50px;
+                padding: 2px;
+                display: flex;
+                justify-content: flex-end;  
+                position: relative;             
+            }
+
+            .cursor-actual::after { // <--------- Point blanc avancée. //
+                content: '';
+                position: absolute;
+                background-color: white;
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 50%;
+                top: 50% ;
+                transform: translateY(-50%);
+            }
+        }
+
+        .cursor-gb { // 0 to 100 GB , Intégré dans le container curseur //
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .bubble { // <----- Position absolute, sort du flux //
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 2.5rem;
+        top: 0;
+        transform: translateY(-65%);
+        background-color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 10px 10px 0 10px;
+    }
+
+    .bubble::after { // <------ Triange en bas a droite de la bulle. //
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: -5px;
+        border-top: 30px solid white;
+        border-left: 30px solid transparent;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+

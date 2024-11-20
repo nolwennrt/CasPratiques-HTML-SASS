@@ -1,0 +1,38 @@
+@mixin text {
+    p {
+        font-family: "Raleway";
+        font-size: 14px;
+        color: $text;
+    }
+
+    .bold {
+        font-weight: 700;
+        color: $bold;
+    }
+
+    .big-bold {
+        font-weight: 700;
+        font-size: 35px;
+        color: $verydarkblue;
+        margin-right: 0.5rem;
+    }
+
+    .gray {
+        color: $gray;
+        font-weight: 700;
+        font-size: 12px;
+    }
+}
+
+@mixin icon {
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $verydarkblue;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 10px;
+        margin-right: 1rem;
+    }
+}
