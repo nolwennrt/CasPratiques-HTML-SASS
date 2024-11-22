@@ -10,7 +10,6 @@
 }
 
 body {
-    // background-color: rebeccapurple;
     @include text;
     @include button;
     @include responsive-desktop-tablet;
@@ -72,6 +71,7 @@ main {
         font-size: 1.5rem;
     }
 
+    // -------- Style propre à la card cta --------- //
     .cta {
         margin-bottom: 0;
         width: 70%;
@@ -125,6 +125,7 @@ footer {
             }
         }
 
+        // ------- Partie liste en grid --------//
         .center-part {
             width: 35%;
 
@@ -184,6 +185,4 @@ footer {
             font-size: 14px;
         }
     }
-
-
 }

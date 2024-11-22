@@ -1,6 +1,7 @@
-             // ------- Responsive des éléments de texte ---------//
+ // ------- Responsive jusqu'a 768px, tailles tablettes et desktop---------//
 
 @mixin responsive-desktop-tablet {
+    // -------- Responsive des éléments de texte--------//
     @media screen and (max-width: 950px) {
         h1 {
             font-size: 2rem;
@@ -22,6 +23,7 @@
             font-size: 14px;
         }
 
+        // --- Taille du logo ---//
         header {
             nav {
                 img {
@@ -30,6 +32,7 @@
             }
         }
 
+        // ------ Taille du bouton ------ //
         main {
             .cta {
                 button {
@@ -40,7 +43,7 @@
         }
     }
 
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 860px) { // <---- Réglage bouton entre 860 et 768 px)
         // --------- Garder le texte du bouton sur une ligne ----------- //
 
         .hero {
@@ -59,10 +62,11 @@
     }
 }
 
-            // -------- Responsive mobile -------- //
+// --------------- Responsive mobile --------------- //
 
 @mixin responsive-mobile {
     @media screen and (max-width: 768px) {
+        // ------- Diminution padding nav, éléments en colonne -------///
         header {
             margin-bottom: 5rem;
             background-image: url(../assets/images/bg-hero-mobile.svg);
@@ -98,6 +102,7 @@
             }
         }
 
+        // --------- Mise en colonne des cards, diminution du padding -------- //
         main {
             padding: 0 1.5rem;
 
@@ -135,6 +140,8 @@
             }
         }
 
+
+        // --------- Passage en colonne ------//
         footer {
             padding-left: 1rem;
             padding-right: 1rem;
