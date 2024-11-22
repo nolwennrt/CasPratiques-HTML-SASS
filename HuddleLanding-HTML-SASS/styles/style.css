@@ -1,1 +1,198 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "OpenSans";
+  src: url(../assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url(../assets/fonts/Poppins-Medium.ttf);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body h1 {
+  font-family: "PoppinsMedium", sans-serif;
+  color: hsl(192, 100%, 9%);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+body h2 {
+  font-family: "PoppinsMedium", sans-serif;
+  color: hsl(192, 100%, 9%);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+body p {
+  font-family: "OpenSans", sans-serif;
+  font-size: 18px;
+  color: hsl(208, 11%, 55%);
+}
+body li {
+  color: rgba(255, 255, 255, 0.868);
+  font-family: "OpenSans", sans-serif;
+  font-size: 18px;
+}
+body button {
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(192, 100%, 9%);
+}
+body button {
+  padding: 1rem 4rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(128, 128, 128, 0.495);
+}
+body .call-to-action {
+  background-color: hsl(322, 100%, 66%);
+  color: rgba(255, 255, 255, 0.868);
+  box-shadow: 0 3px 10px hsla(322, 100%, 66%, 0.605);
+  padding: 1.5rem 4.5rem;
+}
+
+header {
+  background-color: hsl(193, 100%, 96%);
+  background-image: url(../assets/images/bg-hero-desktop.svg);
+  background-repeat: no-repeat;
+  padding: 3rem 4rem;
+  margin-bottom: 10rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav img {
+  width: 12rem;
+}
+header .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+header .hero .hero-content {
+  width: 40%;
+}
+header .hero .hero-content button {
+  margin-top: 2rem;
+}
+header .hero .hero-image {
+  width: 60%;
+  margin-left: 2rem;
+}
+header .hero .hero-image img {
+  width: 100%;
+}
+
+main {
+  padding: 0 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+main .card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(218, 218, 218, 0.608);
+  border-radius: 20px;
+  padding: 3rem 2rem 3rem 8rem;
+  margin-bottom: 3rem;
+}
+main .card .card-content {
+  width: 50%;
+  margin-right: 8rem;
+}
+main .card .card-image {
+  width: 50%;
+}
+main .card .card-image img {
+  width: 100%;
+}
+main .flowing .card-content {
+  margin-right: 0;
+}
+main .flowing .card-image {
+  margin-right: 8rem;
+}
+main .cta {
+  margin-bottom: 0;
+  width: 70%;
+  flex-direction: column;
+  padding: 4rem;
+  transform: translateY(90px);
+  background: white;
+}
+main .cta button {
+  margin-top: 1.5rem;
+  font-size: 18px;
+  padding: 1.7rem 7rem;
+}
+
+footer {
+  background: hsl(192, 100%, 9%);
+  padding-top: 180px;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-bottom: 6rem;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+footer .footer-content .left-part {
+  width: 35%;
+}
+footer .footer-content .left-part .info-part {
+  display: flex;
+  align-items: first baseline;
+}
+footer .footer-content .left-part .info-part p {
+  margin-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.868);
+}
+footer .footer-content .left-part .info-part:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+footer .footer-content .center-part {
+  width: 35%;
+}
+footer .footer-content .center-part ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  list-style: none;
+}
+footer .footer-content .center-part ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+footer .footer-content .right-part {
+  display: flex;
+  width: 20%;
+  color: rgba(255, 255, 255, 0.868);
+}
+footer .footer-content .right-part .icon {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-end {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-end p {
+  color: rgba(255, 255, 255, 0.868);
+}/*# sourceMappingURL=style.css.map */

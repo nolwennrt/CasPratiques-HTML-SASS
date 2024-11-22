@@ -1,0 +1,87 @@
+@mixin text {
+    h1 {
+        font-family: $title;
+        color: $title-color;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-family: $title;
+        color: $title-color;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-family: $text;
+        font-size: 18px;
+        color: $text-color;
+    }
+
+    li {
+        color:rgba(255, 255, 255, 0.868);
+        font-family: $text;
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        font-weight: 700;
+        color: $title-color;
+    }
+}
+
+@mixin button {
+    button {
+        padding: 1rem 4rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: white;
+        box-shadow: 0 3px 10px rgba(128, 128, 128, 0.495);
+    }
+
+    .call-to-action {
+        background-color: $pink;
+        color: rgba(255, 255, 255, 0.868);
+        box-shadow: 0 3px 10px hsla(322, 100%, 66%, 0.605);
+        padding: 1.5rem 4.5rem;
+    }
+}
+
+@mixin card {
+    .card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 15px rgba(218, 218, 218, 0.608);
+        border-radius: 20px;
+        padding: 3rem 2rem 3rem 8rem;
+        margin-bottom: 3rem;
+
+        .card-content {
+            width: 50%;
+            margin-right: 8rem;
+        }
+
+        .card-image {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .flowing {
+        .card-content {
+            margin-right: 0;
+        }
+
+        .card-image {
+            margin-right: 8rem;
+        }
+    }
+}
+
