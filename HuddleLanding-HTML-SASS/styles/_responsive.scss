@@ -1,0 +1,172 @@
+             // ------- Responsive des éléments de texte ---------//
+
+@mixin responsive-desktop-tablet {
+    @media screen and (max-width: 950px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    
+        li {
+            font-size: 16px;
+        }
+    
+        button {
+            font-size: 14px;
+        }
+
+        header {
+            nav {
+                img {
+                    width: 9rem;
+                }
+            }
+        }
+
+        main {
+            .cta {
+                button {
+                    font-size: 14px;
+                    padding: 1.7rem 6rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+        // --------- Garder le texte du bouton sur une ligne ----------- //
+
+        .hero {
+            button {
+                padding: 1.5rem 3rem;
+            }
+        }
+
+        main {
+            .cta {
+                button {
+                    padding: 1.7rem 4rem;
+                }
+            }
+        }
+    }
+}
+
+            // -------- Responsive mobile -------- //
+
+@mixin responsive-mobile {
+    @media screen and (max-width: 768px) {
+        header {
+            margin-bottom: 5rem;
+            background-image: url(../assets/images/bg-hero-mobile.svg);
+
+            nav {
+                padding: 2rem 1rem 0rem 1rem;
+
+                button {
+                    padding: 1rem 0;
+                    width: 30%;
+                }
+            }
+            .hero {
+                flex-direction: column;
+                padding: 3rem 2rem;
+                margin-top: 0rem;
+
+                .hero-content {
+                    width: 100%;
+                    text-align: center;
+
+                    button {
+                        width: 80%;
+                        padding: 1rem;
+                    }
+                }
+
+                .hero-image {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 3rem;
+                }
+            }
+        }
+
+        main {
+            padding: 0 1.5rem;
+
+            .card {
+                flex-direction: column;
+                padding: 2rem;
+                text-align: center;
+
+                .card-content {
+                    margin: 0;
+                    width: 100%;
+                    order: 2;
+                }
+
+                .card-image {
+                    order: 1;
+                    margin-bottom: 2rem;
+                    margin-right: 0;
+                    width: 80%;
+                }
+            }
+
+            .cta {
+                width: 100%;
+                padding: 3rem 1rem;
+
+                h2 {
+                    font-size: 1.2rem;
+                }
+
+                button {
+                    padding: 1rem;
+                    width: 80%;
+                }
+            }
+        }
+
+        footer {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .footer-content {
+                flex-direction: column;
+                margin-bottom: 2rem;
+
+                .left-part {
+                    width: 100%;
+                }
+
+                .center-part {
+                    margin: 3rem 0rem;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+
+                .right-part {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            .footer-end {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    }
+}
+

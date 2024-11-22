@@ -1,6 +1,7 @@
 @import "fonts";
 @import "variables";
 @import "mixins";
+@import "responsive";
 
 * {
     box-sizing: border-box;
@@ -12,19 +13,21 @@ body {
     // background-color: rebeccapurple;
     @include text;
     @include button;
+    @include responsive-desktop-tablet;
+    @include responsive-mobile;
 }
 
 header {
     background-color: hsl(193, 100%, 96%);
     background-image: url(../assets/images/bg-hero-desktop.svg);
     background-repeat: no-repeat;
-    padding: 3rem 4rem;
     margin-bottom: 10rem;
 
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 3rem 4rem 0rem 4rem;
 
         img {
             width: 12rem;
@@ -35,7 +38,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 3rem;
+        padding: 3rem 4rem;
 
         .hero-content {
             width: 40%;
@@ -65,20 +68,23 @@ main {
     position: relative;
     @include card;
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
     .cta {
         margin-bottom: 0;
         width: 70%;
         flex-direction: column;
         padding: 4rem;
-        // position: relative;
-        // top: 40%;
         transform: translateY(90px);
         background: white;
+        text-align: center;
 
         button {
             margin-top: 1.5rem;
-            font-size: 18px;
-            padding:1.7rem 7rem ;
+            font-size: 16px;
+            padding:1.5rem 7rem ;
             box-shadow: 0 3px 10px rgba(128, 128, 128, 0.495);
         }
     }
@@ -151,10 +157,13 @@ footer {
                 border: 1px solid white;
                 border-radius: 50%;
                 padding: 1rem;
-                margin-left: 1rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+
+            .icon:not(:first-child) {
+                margin-left: 1rem;
             }
 
             .icon:hover {
@@ -172,6 +181,7 @@ footer {
 
         p {
             color: rgba(255, 255, 255, 0.868);
+            font-size: 14px;
         }
     }
 
