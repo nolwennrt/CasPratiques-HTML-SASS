@@ -79,6 +79,7 @@ main {
             margin-top: 1.5rem;
             font-size: 18px;
             padding:1.7rem 7rem ;
+            box-shadow: 0 3px 10px rgba(128, 128, 128, 0.495);
         }
     }
 }
@@ -88,16 +89,17 @@ footer {
     padding-top: 180px;
     padding-left: 6rem;
     padding-right: 6rem;
-    padding-bottom: 6rem;
+    padding-bottom: 2rem;
 
-    // .logo-footer {
-    //     color: white;
-    // }
+    
+     .logo-footer {
+        margin-bottom: 2rem;
+    }
     
     .footer-content {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
 
         .left-part {
             width: 35%;
@@ -126,9 +128,13 @@ footer {
                 grid-template-rows: repeat(3, 1fr);
                 list-style: none;
 
-
                 li:not(:last-child) {
                     margin-bottom: 1rem;
+                }
+
+                li:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
                 }
             }
 
@@ -149,6 +155,12 @@ footer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+
+            .icon:hover {
+                color: $pink;
+                border: 1px solid $pink;
+                cursor: pointer;
             }
 
         }

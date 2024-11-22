@@ -42,11 +42,19 @@
         box-shadow: 0 3px 10px rgba(128, 128, 128, 0.495);
     }
 
+    button:hover {
+        opacity: 0.7;
+    }
+
     .call-to-action {
         background-color: $pink;
         color: rgba(255, 255, 255, 0.868);
         box-shadow: 0 3px 10px hsla(322, 100%, 66%, 0.605);
         padding: 1.5rem 4.5rem;
+    }
+
+    .call-to-action:hover {
+        opacity: 0.7;
     }
 }
 
