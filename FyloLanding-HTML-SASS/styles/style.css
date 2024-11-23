@@ -34,7 +34,7 @@ body h1, body h2 {
 body h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: hsl(243, 87%, 12%);
   margin-bottom: 1.5rem;
 }
@@ -107,4 +107,108 @@ header .hero .hero-image {
 }
 header .hero .hero-image img {
   width: 100%;
+}
+
+main .productive {
+  background-color: hsl(240, 75%, 98%);
+  padding: 3rem 4rem 6rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+main .productive .productive-content {
+  width: 50%;
+}
+main .productive .productive-content p {
+  width: 80%;
+}
+main .productive .productive-content p .space {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1rem;
+}
+main .productive .productive-content p .accent {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid hsl(170, 45%, 43%);
+  padding-bottom: 0.2rem;
+}
+main .productive .productive-content p .accent a {
+  text-decoration: none;
+  color: hsl(170, 45%, 43%);
+}
+main .productive .productive-content p .accent img {
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+main .productive .productive-content .card {
+  background-color: white;
+  width: 50%;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(169, 169, 169, 0.626);
+}
+main .productive .productive-content .card p {
+  width: 100%;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin: 0.5rem 0rem;
+}
+main .productive .productive-content .card .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .productive .productive-content .card .review img {
+  border-radius: 50%;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+main .productive .productive-content .card .review p {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+main .productive .productive-content .card .review p span {
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+main .productive .productive-image {
+  width: 40%;
+}
+main .productive .productive-image img {
+  width: 100%;
+}
+main .early {
+  background-color: hsl(238, 22%, 44%);
+  padding: 6rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .early .early-content {
+  width: 40%;
+}
+main .early .early-content h3, main .early .early-content p {
+  color: rgba(255, 255, 255, 0.847);
+  line-height: 1.5rem;
+}
+main .early .early-content p {
+  margin-bottom: 0;
+}
+main .early .early-form {
+  width: 40%;
+}
+main .early .early-form input {
+  height: 3rem;
+}
+main .early .early-form input[type=text] {
+  width: 100%;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
+}
+main .early .early-form input[type=submit] {
+  margin-left: 0;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
 }/*# sourceMappingURL=style.css.map */
