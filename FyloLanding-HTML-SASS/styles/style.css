@@ -99,8 +99,7 @@ header .hero {
   align-items: center;
 }
 header .hero .hero-content {
-  width: 50%;
-  padding-right: 8rem;
+  width: 40%;
 }
 header .hero .hero-image {
   width: 50%;
@@ -114,6 +113,7 @@ main .productive {
   padding: 3rem 4rem 6rem 4rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 main .productive .productive-content {
   width: 50%;
@@ -211,4 +211,63 @@ main .early .early-form input[type=submit] {
   margin-left: 0;
   margin-top: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
+  width: 50%;
+}
+
+footer {
+  background-color: hsl(243, 87%, 12%);
+  padding: 6rem 4rem 2rem 4rem;
+}
+footer .footer-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 2rem 0rem;
+}
+footer .footer-content .content-start {
+  width: 30%;
+}
+footer .footer-content .content-start p {
+  color: rgba(255, 255, 255, 0.8);
+}
+footer .footer-content .content-start img {
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+footer .footer-content .content-middle {
+  width: 40%;
+}
+footer .footer-content .content-middle ul {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+footer .footer-content .content-middle ul li {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+footer .footer-content .content-end {
+  display: flex;
+  width: 20%;
+}
+footer .footer-content .content-end .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+footer .footer-content .content-end .icon:not(:first-child) {
+  margin-left: 1rem;
+}
+footer .attribution {
+  margin-bottom: 0;
+  margin-top: 4rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
 }/*# sourceMappingURL=style.css.map */
