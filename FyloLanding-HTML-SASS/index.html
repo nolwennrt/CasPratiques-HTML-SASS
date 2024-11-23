@@ -28,8 +28,11 @@
         <h1>All your files in one secure location, accessible anywhere.</h1>
         <p>Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
         <form action="" method="get">
-          <input type="text" name="mail" placeholder="Enter your email...">
-          <input type="submit" value="Get Started">
+          <div class="input-group">
+            <input type="email" name="mail" placeholder="Enter your email...">
+            <input type="submit" value="Get Started">
+          </div>
+          <span class="message">Please check your email</span>
         </form>
       </div>
 
@@ -71,7 +74,10 @@
       </div>
       <div class="early-form">
         <form action="" method="get">
-          <input type="text" name="mail" placeholder="email@example.com">
+          <div class="input-group">
+            <input type="email" name="mail" placeholder="email@example.com">
+            <span class="message">Please check your email</span>
+          </div>
           <input type="submit" value="Get Started For Free">
         </form>
       </div>

@@ -50,6 +50,7 @@ body footer li {
 }
 body form input {
   height: 2.5rem;
+  margin-bottom: 0.2rem;
 }
 body form input::-moz-placeholder {
   color: hsl(0, 0%, 75%);
@@ -57,7 +58,7 @@ body form input::-moz-placeholder {
 body form input::placeholder {
   color: hsl(0, 0%, 75%);
 }
-body form input[type=text] {
+body form input[type=email] {
   border: 0.5px solid hsl(243, 87%, 12%);
   border-radius: 2px;
   width: 55%;
@@ -72,6 +73,21 @@ body form input[type=submit] {
   box-shadow: 0 2px 5px rgba(141, 141, 141, 0.53);
   margin-left: 0.5rem;
   cursor: pointer;
+}
+body form input[type=submit]:hover {
+  background-color: hsl(224, 100%, 70%);
+}
+body form .message {
+  font-family: "OpenSans", sans-serif;
+  font-size: 0.7rem;
+  color: rgb(193, 71, 93);
+  display: none;
+}
+body form:has(input:invalid) input[type=email] {
+  border: 1px solid rgb(193, 71, 93);
+}
+body form:has(input:invalid) .message {
+  display: block;
 }
 
 header {
@@ -202,7 +218,7 @@ main .early .early-form {
 main .early .early-form input {
   height: 3rem;
 }
-main .early .early-form input[type=text] {
+main .early .early-form input[type=email] {
   width: 100%;
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
@@ -212,6 +228,12 @@ main .early .early-form input[type=submit] {
   margin-top: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
   width: 50%;
+}
+main .early .early-form .message {
+  color: rgba(255, 255, 255, 0.847);
+}
+main .early .early-form form:has(input:invalid) input[type=email] {
+  border: 1px solid rgb(193, 71, 93);
 }
 
 footer {
@@ -248,6 +270,9 @@ footer .footer-content .content-middle ul li {
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
+footer .footer-content .content-middle ul li:hover {
+  color: hsl(224, 100%, 70%);
+}
 footer .footer-content .content-end {
   display: flex;
   width: 20%;
@@ -261,6 +286,11 @@ footer .footer-content .content-end .icon {
   height: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
+  cursor: pointer;
+}
+footer .footer-content .content-end .icon:hover {
+  color: hsl(224, 100%, 70%);
+  border: 1px solid hsl(224, 100%, 70%);
 }
 footer .footer-content .content-end .icon:not(:first-child) {
   margin-left: 1rem;
