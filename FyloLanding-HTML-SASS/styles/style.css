@@ -1,1 +1,110 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Raleway";
+  src: url(../assets/fonts/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url(../assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body p {
+  font-family: "OpenSans", sans-serif;
+  font-size: 1rem;
+  color: hsl(243, 87%, 12%);
+  margin-bottom: 2rem;
+}
+body header li {
+  font-family: "Raleway", sans-serif;
+  color: hsl(243, 87%, 12%);
+  cursor: pointer;
+}
+body h1, body h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsl(243, 87%, 12%);
+  margin-bottom: 1.5rem;
+  line-height: 3rem;
+}
+body h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: hsl(243, 87%, 12%);
+  margin-bottom: 1.5rem;
+}
+body form input[type=submit] {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: hsl(243, 87%, 12%);
+}
+body footer li {
+  font-family: "OpenSans", sans-serif;
+  color: hsl(243, 87%, 12%);
+  cursor: pointer;
+}
+body form input {
+  height: 2.5rem;
+}
+body form input::-moz-placeholder {
+  color: hsl(0, 0%, 75%);
+}
+body form input::placeholder {
+  color: hsl(0, 0%, 75%);
+}
+body form input[type=text] {
+  border: 0.5px solid hsl(243, 87%, 12%);
+  border-radius: 2px;
+  width: 55%;
+  padding-left: 1rem;
+}
+body form input[type=submit] {
+  width: 35%;
+  border: none;
+  background-color: hsl(224, 93%, 58%);
+  color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(141, 141, 141, 0.53);
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+header {
+  background-image: url(../assets/images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 3rem 4rem 13rem 4rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  list-style: none;
+  margin-left: 2.5rem;
+}
+header .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .hero .hero-content {
+  width: 50%;
+  padding-right: 8rem;
+}
+header .hero .hero-image {
+  width: 50%;
+}
+header .hero .hero-image img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,83 @@
+@mixin text {
+    p {
+        font-family: $text-font;
+        font-size: 1rem;
+        color: $text;
+        margin-bottom: 2rem;
+    }
+
+    header {
+        li {
+            font-family: $title;
+            color: $text;
+            cursor: pointer;
+        }
+    }
+
+    h1 {
+        font-family: $title;
+        font-weight: 700;
+        font-size: 2rem;
+        color: $text;
+        margin-bottom: 1.5rem;
+        line-height: 3rem
+    }
+
+    h2 {
+        @extend h1;
+    }
+
+    h3 {
+        font-family: $title;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $text;
+        margin-bottom: 1.5rem;
+    }
+
+    form {
+        input[type="submit"] {
+            font-family: $title;
+            font-weight: 600;
+            color: $text;
+        }
+    }
+
+    footer {
+        li {
+            font-family: $text-font;
+            color: $text;
+            cursor: pointer;
+        }
+    }
+}
+
+@mixin form {
+    form {
+        input {
+            height: 2.5rem;
+
+            &::placeholder {
+                color: $lightgrey;
+            }
+        }
+
+        input[type="text"] {
+            border: 0.5px solid $text;
+            border-radius: 2px;
+            width: 55%;
+            padding-left: 1rem;
+        }
+
+        input[type="submit"] {
+            width: 35%;
+            border: none;
+            background-color: $button;
+            color: white;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(141, 141, 141, 0.53);
+            margin-left: 0.5rem;
+            cursor: pointer;
+        }
+    }
+}
