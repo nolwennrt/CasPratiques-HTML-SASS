@@ -33,6 +33,25 @@ header {
                 margin-left: 2.5rem;
             }
         }
+
+        @media screen and (max-width: 767px) {
+            ul {
+                li {
+                    margin-left: 1rem;
+                }
+            }
+
+
+            img {
+                width: 7rem;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+            img {
+                width: 4.5rem;
+            }
+        }
     }
 
     .hero {
@@ -62,8 +81,30 @@ header {
                 width: 40%;
             }
         }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+
+            .hero-content {
+                width: 100%;
+                order: 2;
+                text-align: center;
+                margin-top: 2.5rem;
+            }
+
+            .hero-image {
+                width: 100%;
+                order: 1;
+            }
+
+
+        }
     }
 
+    @media screen and (max-width: 767px) {
+        padding: 2rem 2rem 8rem 2rem;
+        background-image: url(../assets/images/bg-curve-mobile.svg);
+    }
 
 }
 
@@ -173,6 +214,34 @@ main {
             }
     
         }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            padding: 2rem 2rem 6rem 2rem;
+
+            .productive-content {
+                order: 2;
+                width: 100%;
+                text-align: center;
+                margin-top: 6rem;
+
+                p {
+                    text-align: left;
+
+                    .accent {
+                        margin: 3rem auto;
+                    }
+                }
+
+                .card {
+                    text-align: left;
+                }
+            }
+
+            .productive-image {
+                width: 100%;
+            }
+        }
     }
 
     .early {
@@ -200,24 +269,43 @@ main {
             width: 40%;
 
             // -------- Style propre au formulaire de base de page --------- //
-            input {
-                height: 3rem;
+            form {
+                flex-direction: column;
+
+                input {
+                    height: 3rem;
+                }
+
+                .input-group {
+                    width: 100%;
+                    input[type="email"] {
+                        width: 100%;
+                        border: none;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
+        
+                    }
+                }
+
+                .submit {
+                    width: 50%;
+                    margin-left: 0;
+                    margin-top: 1rem;
+
+                    input[type="submit"] {
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
+                        width: 100%;
+                    }
+
+                    @media screen and (max-width: 1000px) {
+                        width: 70%;
+                    }
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
+                        margin-top: 0.5rem;
+                    }
+                }
             }
-
-            input[type="email"] {
-                width: 100%;
-                border: none;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
-
-            }
-
-            input[type="submit"] {
-                margin-left: 0;
-                margin-top: 1rem;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
-                width: 50%;
-            }
-
+            
             .message {
                 color: rgba(255, 255, 255, 0.847);
             }
@@ -228,12 +316,20 @@ main {
                     border: 1px solid rgb(193, 71, 93);
                 }
             }
+        }
 
-            @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            padding: 5rem 3rem;
 
-                input[type="submit"] {
-                    width: 70%;
-                }
+            .early-content {
+                width: 100%;
+                text-align: center;
+            }
+
+            .early-form {
+                width: 100%;
+                margin-top: 2.5rem;
             }
         }
     }
@@ -241,7 +337,7 @@ main {
 
 footer {
     background-color: $text;
-    padding: 6rem 4rem 2rem 4rem;
+    padding: 4rem 4rem 2rem 4rem;
 
     .footer-content {
         display: flex;
@@ -286,7 +382,6 @@ footer {
 
         .content-end {
             display: flex;
-            width: 20%;
 
             .icon {
                 display: flex;
@@ -307,6 +402,32 @@ footer {
 
             .icon:not(:first-child) {
                 margin-left: 1rem;
+            }
+        }
+
+        @media screen and (max-width : 767px) {
+            flex-direction: column;
+
+            .content-start {
+                width: 100%;
+            }
+
+            .content-middle {
+                width: 100%;
+                margin: 3rem 0rem 4rem 0rem;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    li:nth-child(4) {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
+            .content-end {
+                justify-content: center;
             }
         }
     }

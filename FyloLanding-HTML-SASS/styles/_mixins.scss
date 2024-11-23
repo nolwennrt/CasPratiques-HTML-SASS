@@ -4,6 +4,10 @@
         font-size: 1rem;
         color: $text;
         margin-bottom: 2rem;
+
+        @media screen and (max-width: 767px) {
+            font-size: 0.8rem;
+        }
     }
 
     header {
@@ -11,6 +15,10 @@
             font-family: $title;
             color: $text;
             cursor: pointer;
+
+            @media screen and (max-width: 380px) {
+                font-size: 0.7rem;
+            }
         }
     }
 
@@ -20,7 +28,13 @@
         font-size: 2rem;
         color: $text;
         margin-bottom: 1.5rem;
-        line-height: 3rem
+        line-height: 3rem;
+
+        @media screen and (max-width: 767px) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
     }
 
     h2 {
@@ -31,6 +45,11 @@
         @extend h1;
         line-height: 2.5rem;
         font-size: 1.9rem;
+
+        @media screen and (max-width: 767px) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
     }
 
     form {
@@ -46,12 +65,18 @@
             font-family: $text-font;
             color: $text;
             cursor: pointer;
+
+            @media screen and (max-width: 767px) {
+                font-size: 0.8rem;
+            }
         }
     }
 }
 
 @mixin form {
     form {
+        display: flex;
+
         input {
             height: 2.5rem;
             margin-bottom: 0.2rem;
@@ -61,34 +86,59 @@
             }
         }
 
-        input[type="email"] {
-            border: 0.5px solid $text;
-            border-radius: 2px;
+        .input-group {
             width: 55%;
-            padding-left: 1rem;
-        }
 
-        input[type="submit"] {
-            width: 35%;
-            border: none;
-            background-color: $button;
-            color: white;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(141, 141, 141, 0.53);
-            margin-left: 0.5rem;
-            cursor: pointer;
+            input[type="email"] {
+                border: 0.5px solid $text;
+                border-radius: 2px;
+                width: 100%;
+                padding-left: 1rem;
+            }
 
-            &:hover {
-                background-color: $bluehover;
+            @media screen and (max-width: 768px) {
+                width: 100%;
             }
         }
+        
+        .submit {
+            width: 35%;
+            margin-left: 0.5rem;
+
+            input[type="submit"] {
+                width: 100%;
+                border: none;
+                background-color: $button;
+                color: white;
+                border-radius: 2px;
+                box-shadow: 0 2px 5px rgba(141, 141, 141, 0.53);
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: $bluehover;
+                }
+            }
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+        
 
         .message {
             font-family: $text-font;
             font-size: 0.7rem;
             color: rgb(193, 71, 93);
             display: none;
+            text-align: left;
         }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+
     }
 
     form:has(input:invalid) {
@@ -102,4 +152,6 @@
         }
 
     }
+
+
 }

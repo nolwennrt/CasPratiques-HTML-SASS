@@ -18,10 +18,20 @@ body p {
   color: hsl(243, 87%, 12%);
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 767px) {
+  body p {
+    font-size: 0.8rem;
+  }
+}
 body header li {
   font-family: "Raleway", sans-serif;
   color: hsl(243, 87%, 12%);
   cursor: pointer;
+}
+@media screen and (max-width: 380px) {
+  body header li {
+    font-size: 0.7rem;
+  }
 }
 body h1, body h3, body h2 {
   font-family: "Raleway", sans-serif;
@@ -31,9 +41,21 @@ body h1, body h3, body h2 {
   margin-bottom: 1.5rem;
   line-height: 3rem;
 }
+@media screen and (max-width: 767px) {
+  body h1, body h3, body h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 body h3 {
   line-height: 2.5rem;
   font-size: 1.9rem;
+}
+@media screen and (max-width: 767px) {
+  body h3 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 body form input[type=submit] {
   font-family: "Raleway", sans-serif;
@@ -45,6 +67,14 @@ body footer li {
   color: hsl(243, 87%, 12%);
   cursor: pointer;
 }
+@media screen and (max-width: 767px) {
+  body footer li {
+    font-size: 0.8rem;
+  }
+}
+body form {
+  display: flex;
+}
 body form input {
   height: 2.5rem;
   margin-bottom: 0.2rem;
@@ -55,30 +85,54 @@ body form input::-moz-placeholder {
 body form input::placeholder {
   color: hsl(0, 0%, 75%);
 }
-body form input[type=email] {
+body form .input-group {
+  width: 55%;
+}
+body form .input-group input[type=email] {
   border: 0.5px solid hsl(243, 87%, 12%);
   border-radius: 2px;
-  width: 55%;
+  width: 100%;
   padding-left: 1rem;
 }
-body form input[type=submit] {
+@media screen and (max-width: 768px) {
+  body form .input-group {
+    width: 100%;
+  }
+}
+body form .submit {
   width: 35%;
+  margin-left: 0.5rem;
+}
+body form .submit input[type=submit] {
+  width: 100%;
   border: none;
   background-color: hsl(224, 93%, 58%);
   color: white;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(141, 141, 141, 0.53);
-  margin-left: 0.5rem;
   cursor: pointer;
 }
-body form input[type=submit]:hover {
+body form .submit input[type=submit]:hover {
   background-color: hsl(224, 100%, 70%);
+}
+@media screen and (max-width: 767px) {
+  body form .submit {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
 }
 body form .message {
   font-family: "OpenSans", sans-serif;
   font-size: 0.7rem;
   color: rgb(193, 71, 93);
   display: none;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  body form {
+    flex-direction: column;
+  }
 }
 body form:has(input:invalid) input[type=email] {
   border: 1px solid rgb(193, 71, 93);
@@ -106,6 +160,19 @@ header nav ul li {
   list-style: none;
   margin-left: 2.5rem;
 }
+@media screen and (max-width: 767px) {
+  header nav ul li {
+    margin-left: 1rem;
+  }
+  header nav img {
+    width: 7rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  header nav img {
+    width: 4.5rem;
+  }
+}
 header .hero {
   display: flex;
   justify-content: space-between;
@@ -126,6 +193,27 @@ header .hero .hero-image img {
   }
   header .hero .hero-image {
     width: 40%;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .hero {
+    flex-direction: column;
+  }
+  header .hero .hero-content {
+    width: 100%;
+    order: 2;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  header .hero .hero-image {
+    width: 100%;
+    order: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    padding: 2rem 2rem 8rem 2rem;
+    background-image: url(../assets/images/bg-curve-mobile.svg);
   }
 }
 
@@ -214,6 +302,30 @@ main .productive .productive-image img {
     width: 30%;
   }
 }
+@media screen and (max-width: 767px) {
+  main .productive {
+    flex-direction: column;
+    padding: 2rem 2rem 6rem 2rem;
+  }
+  main .productive .productive-content {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    margin-top: 6rem;
+  }
+  main .productive .productive-content p {
+    text-align: left;
+  }
+  main .productive .productive-content p .accent {
+    margin: 3rem auto;
+  }
+  main .productive .productive-content .card {
+    text-align: left;
+  }
+  main .productive .productive-image {
+    width: 100%;
+  }
+}
 main .early {
   background-color: hsl(238, 22%, 44%);
   padding: 6rem 4rem;
@@ -234,19 +346,39 @@ main .early .early-content p {
 main .early .early-form {
   width: 40%;
 }
-main .early .early-form input {
+main .early .early-form form {
+  flex-direction: column;
+}
+main .early .early-form form input {
   height: 3rem;
 }
-main .early .early-form input[type=email] {
+main .early .early-form form .input-group {
+  width: 100%;
+}
+main .early .early-form form .input-group input[type=email] {
   width: 100%;
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
 }
-main .early .early-form input[type=submit] {
+main .early .early-form form .submit {
+  width: 50%;
   margin-left: 0;
   margin-top: 1rem;
+}
+main .early .early-form form .submit input[type=submit] {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.263);
-  width: 50%;
+  width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  main .early .early-form form .submit {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 767px) {
+  main .early .early-form form .submit {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
 main .early .early-form .message {
   color: rgba(255, 255, 255, 0.847);
@@ -254,15 +386,24 @@ main .early .early-form .message {
 main .early .early-form form:has(input:invalid) input[type=email] {
   border: 1px solid rgb(193, 71, 93);
 }
-@media screen and (max-width: 1000px) {
-  main .early .early-form input[type=submit] {
-    width: 70%;
+@media screen and (max-width: 767px) {
+  main .early {
+    flex-direction: column;
+    padding: 5rem 3rem;
+  }
+  main .early .early-content {
+    width: 100%;
+    text-align: center;
+  }
+  main .early .early-form {
+    width: 100%;
+    margin-top: 2.5rem;
   }
 }
 
 footer {
   background-color: hsl(243, 87%, 12%);
-  padding: 6rem 4rem 2rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
 }
 footer .footer-content {
   display: flex;
@@ -299,7 +440,6 @@ footer .footer-content .content-middle ul li:hover {
 }
 footer .footer-content .content-end {
   display: flex;
-  width: 20%;
 }
 footer .footer-content .content-end .icon {
   display: flex;
@@ -318,6 +458,28 @@ footer .footer-content .content-end .icon:hover {
 }
 footer .footer-content .content-end .icon:not(:first-child) {
   margin-left: 1rem;
+}
+@media screen and (max-width: 767px) {
+  footer .footer-content {
+    flex-direction: column;
+  }
+  footer .footer-content .content-start {
+    width: 100%;
+  }
+  footer .footer-content .content-middle {
+    width: 100%;
+    margin: 3rem 0rem 4rem 0rem;
+  }
+  footer .footer-content .content-middle ul {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-content .content-middle ul li:nth-child(4) {
+    margin-bottom: 2rem;
+  }
+  footer .footer-content .content-end {
+    justify-content: center;
+  }
 }
 footer .attribution {
   margin-bottom: 0;
