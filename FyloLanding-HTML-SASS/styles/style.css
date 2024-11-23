@@ -23,7 +23,7 @@ body header li {
   color: hsl(243, 87%, 12%);
   cursor: pointer;
 }
-body h1, body h2 {
+body h1, body h3, body h2 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 2rem;
@@ -32,11 +32,8 @@ body h1, body h2 {
   line-height: 3rem;
 }
 body h3 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
+  line-height: 2.5rem;
   font-size: 1.9rem;
-  color: hsl(243, 87%, 12%);
-  margin-bottom: 1.5rem;
 }
 body form input[type=submit] {
   font-family: "Raleway", sans-serif;
@@ -123,6 +120,14 @@ header .hero .hero-image {
 header .hero .hero-image img {
   width: 100%;
 }
+@media screen and (max-width: 1000px) {
+  header .hero .hero-content {
+    width: 55%;
+  }
+  header .hero .hero-image {
+    width: 40%;
+  }
+}
 
 main .productive {
   background-color: hsl(240, 75%, 98%);
@@ -195,6 +200,20 @@ main .productive .productive-image {
 main .productive .productive-image img {
   width: 100%;
 }
+@media screen and (max-width: 1000px) {
+  main .productive .productive-content {
+    width: 60%;
+  }
+  main .productive .productive-content p {
+    width: 100%;
+  }
+  main .productive .productive-content .card {
+    width: 100%;
+  }
+  main .productive .productive-image {
+    width: 30%;
+  }
+}
 main .early {
   background-color: hsl(238, 22%, 44%);
   padding: 6rem 4rem;
@@ -207,9 +226,9 @@ main .early .early-content {
 }
 main .early .early-content h3, main .early .early-content p {
   color: rgba(255, 255, 255, 0.847);
-  line-height: 1.5rem;
 }
 main .early .early-content p {
+  line-height: 1.5rem;
   margin-bottom: 0;
 }
 main .early .early-form {
@@ -235,6 +254,11 @@ main .early .early-form .message {
 main .early .early-form form:has(input:invalid) input[type=email] {
   border: 1px solid rgb(193, 71, 93);
 }
+@media screen and (max-width: 1000px) {
+  main .early .early-form input[type=submit] {
+    width: 70%;
+  }
+}
 
 footer {
   background-color: hsl(243, 87%, 12%);
@@ -247,7 +271,7 @@ footer .footer-content {
   margin: 2rem 0rem;
 }
 footer .footer-content .content-start {
-  width: 30%;
+  width: 35%;
 }
 footer .footer-content .content-start p {
   color: rgba(255, 255, 255, 0.8);

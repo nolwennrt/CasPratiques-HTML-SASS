@@ -28,11 +28,9 @@
     }
 
     h3 {
-        font-family: $title;
-        font-weight: 700;
+        @extend h1;
+        line-height: 2.5rem;
         font-size: 1.9rem;
-        color: $text;
-        margin-bottom: 1.5rem;
     }
 
     form {
