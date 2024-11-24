@@ -14,9 +14,9 @@
 
 @mixin text {
 
-    h1 { @include title(2rem)}
+    h1 { @include title(2.5rem)}
 
-    h2 { @include title(1.5rem)}
+    h2 { @include title(2rem)}
 
     h3 { @include title(1.2rem)}
 
@@ -45,10 +45,41 @@
     color: $text-light;
     font-family: $text;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
     border-radius: 30px;
     padding: 1rem;
     width: $width;
+    box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
+}
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin section($padding) {
+    padding: $padding ;
+    @include flex(row);
+
+    .section-content {
+        width: 45%;
+    }
+
+    .section-image {
+        width: 45%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@mixin background($position) {
+    background-position: $position;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 @mixin form {
@@ -57,11 +88,4 @@
         @include button;
         font-size: 0.8rem;
     }
-}
-
-@mixin flex($direction) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: space-between;
-    align-items: center;
 }

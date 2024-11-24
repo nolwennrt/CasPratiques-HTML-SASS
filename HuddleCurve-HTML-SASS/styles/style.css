@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "Poppins";
-  src: url(../assets/fonts/Poppins-SemiBold.ttf);
+  src: url(../assets/fonts/Poppins-Bold.ttf);
 }
 * {
   box-sizing: border-box;
@@ -16,13 +16,13 @@ body h1 {
   font-family: "Poppins", sans-serif;
   color: hsl(192, 100%, 9%);
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 body h2 {
   font-family: "Poppins", sans-serif;
   color: hsl(192, 100%, 9%);
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 body h3 {
   font-family: "Poppins", sans-serif;
@@ -70,32 +70,19 @@ body input[type=submit] {
   color: white;
   font-family: "OpenSans", sans-serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border-radius: 30px;
   padding: 1rem;
   width: auto;
+  box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
   font-size: 0.8rem;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-  background-color: hsl(322, 100%, 66%);
-  color: white;
-  font-family: "OpenSans", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  border-radius: 30px;
-  padding: 1rem;
-  width: auto;
 }
 
 header {
   background-image: url(../assets/images/bg-section-top-desktop-1.svg);
-  background-repeat: no-repeat;
   background-position: bottom;
+  background-repeat: no-repeat;
   background-size: contain;
-  text-align: center;
 }
 header nav {
   display: flex;
@@ -113,10 +100,12 @@ header nav a {
   color: white;
   font-family: "OpenSans", sans-serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border-radius: 30px;
   padding: 1rem;
   width: auto;
+  box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
+  box-shadow: none;
   background-color: transparent;
   color: hsl(322, 100%, 66%);
   text-decoration: none;
@@ -148,10 +137,11 @@ header .header .header-content button {
   color: white;
   font-family: "OpenSans", sans-serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border-radius: 30px;
   padding: 1rem;
   width: 30%;
+  box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
 }
 header .header .header-image {
   width: 90%;
@@ -167,4 +157,84 @@ header .header .header-data {
   justify-content: space-between;
   align-items: center;
   text-align: left;
+}
+
+main .section.grow {
+  padding: 2rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(207, 100%, 98%);
+}
+main .section.grow .section-content {
+  width: 45%;
+}
+main .section.grow .section-image {
+  width: 45%;
+}
+main .section.grow .section-image img {
+  width: 100%;
+}
+main .section.flowing {
+  padding: 15rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../assets/images/bg-section-bottom-desktop-1.svg), url(../assets/images/bg-section-top-desktop-2.svg);
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+main .section.flowing .section-content {
+  width: 45%;
+}
+main .section.flowing .section-image {
+  width: 45%;
+}
+main .section.flowing .section-image img {
+  width: 100%;
+}
+main .section.flowing .section-content {
+  order: 2;
+}
+main .section.users {
+  padding: 2rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(207, 100%, 98%);
+}
+main .section.users .section-content {
+  width: 45%;
+}
+main .section.users .section-image {
+  width: 45%;
+}
+main .section.users .section-image img {
+  width: 100%;
+}
+main .call-to-action {
+  padding: 15rem 10rem 20rem 10rem;
+  background-image: url(../assets/images/bg-section-bottom-desktop-2.svg), url(../assets/images/bg-footer-top-desktop.svg);
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+main .call-to-action button {
+  border: none;
+  cursor: pointer;
+  background-color: hsl(322, 100%, 66%);
+  color: white;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  padding: 1rem;
+  width: 30%;
+  box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */

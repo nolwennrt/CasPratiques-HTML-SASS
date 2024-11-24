@@ -14,16 +14,9 @@ body {
     // background-color: rebeccapurple;
 }
 
-button {
-    @include button;
-}
-
 header {
     background-image: url(../assets/images/bg-section-top-desktop-1.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-    text-align: center;
+    @include background(bottom);
 
     nav {
         display: flex;
@@ -37,6 +30,7 @@ header {
 
         a {
             @include button;
+            box-shadow: none;
             background-color: transparent;
             color: $pink;
             text-decoration: none;
@@ -79,3 +73,41 @@ header {
         }
     }
 }
+
+main {
+    .section {
+
+        &.grow {
+            @include section(2rem 10rem);
+            background-color: $background;
+        }
+
+        &.flowing {
+            @include section(15rem 10rem);
+            background-image: url(../assets/images/bg-section-bottom-desktop-1.svg), url(../assets/images/bg-section-top-desktop-2.svg);
+            @include background((top,bottom));
+
+            .section-content {
+                order: 2;
+            }
+        }
+
+        &.users {
+            @include section(2rem 10rem);
+            background-color: $background;
+        }
+    }
+
+    .call-to-action {
+        padding: 15rem 10rem 20rem 10rem;
+        background-image: url(../assets/images/bg-section-bottom-desktop-2.svg), url(../assets/images/bg-footer-top-desktop.svg);
+        @include background((top, bottom));
+        text-align: center;
+
+        button {
+            @include button(30%);
+            margin-top: 1rem;
+        }
+    }
+}
+
