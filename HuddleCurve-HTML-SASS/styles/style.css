@@ -31,6 +31,20 @@ body h3 {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.913);
 }
+@media screen and (max-width: 1050px) {
+  body h1 {
+    font-family: "Poppins", sans-serif;
+    color: hsl(192, 100%, 9%);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  body h2 {
+    font-family: "Poppins", sans-serif;
+    color: hsl(192, 100%, 9%);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}
 body p, body a {
   font-family: "OpenSans", sans-serif;
   font-size: 1rem;
@@ -98,7 +112,7 @@ header nav a {
   font-family: "OpenSans", sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
-  border-radius: 30px;
+  border-radius: 50px;
   width: auto;
   height: auto;
   box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
@@ -130,11 +144,16 @@ header .header .header-content {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 header .header .header-content p {
   width: 45%;
   margin-bottom: 2rem;
-  text-align: center;
+}
+@media screen and (max-width: 1050px) {
+  header .header .header-content p {
+    width: 70%;
+  }
 }
 header .header .header-content button {
   border: none;
@@ -144,13 +163,31 @@ header .header .header-content button {
   font-family: "OpenSans", sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
-  border-radius: 30px;
+  border-radius: 50px;
   width: 30%;
   height: 4rem;
   box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
 }
 header .header .header-content button:hover {
   background-color: hsl(321, 100%, 78%);
+}
+@media screen and (max-width: 1050px) {
+  header .header .header-content button {
+    border: none;
+    cursor: pointer;
+    background-color: hsl(322, 100%, 66%);
+    color: rgba(255, 255, 255, 0.913);
+    font-family: "OpenSans", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    width: 50%;
+    height: 3rem;
+    box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
+  }
+  header .header .header-content button:hover {
+    background-color: hsl(321, 100%, 78%);
+  }
 }
 header .header .header-image {
   width: 90%;
@@ -166,6 +203,11 @@ header .header .header-data {
   justify-content: space-between;
   align-items: center;
   text-align: left;
+}
+@media screen and (max-width: 1050px) {
+  header .header .header-data {
+    width: 90%;
+  }
 }
 
 main .section.grow {
@@ -241,7 +283,7 @@ main .call-to-action button {
   font-family: "OpenSans", sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
-  border-radius: 30px;
+  border-radius: 50px;
   width: 30%;
   height: 4rem;
   box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
@@ -249,6 +291,24 @@ main .call-to-action button {
 }
 main .call-to-action button:hover {
   background-color: hsl(321, 100%, 78%);
+}
+@media screen and (max-width: 1050px) {
+  main .call-to-action button {
+    border: none;
+    cursor: pointer;
+    background-color: hsl(322, 100%, 66%);
+    color: rgba(255, 255, 255, 0.913);
+    font-family: "OpenSans", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    width: 40%;
+    height: 3rem;
+    box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
+  }
+  main .call-to-action button:hover {
+    background-color: hsl(321, 100%, 78%);
+  }
 }
 
 footer {
@@ -283,6 +343,11 @@ footer .footer-content .info p {
 footer .footer-content .info img {
   margin-right: 1rem;
   vertical-align: middle;
+}
+@media screen and (max-width: 1050px) {
+  footer .footer-content .info {
+    width: 40%;
+  }
 }
 footer .footer-content .newsletter {
   width: 40%;
@@ -332,7 +397,7 @@ footer .footer-content .newsletter form .submit input[type=submit] {
   font-family: "OpenSans", sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
-  border-radius: 30px;
+  border-radius: 50px;
   width: 100%;
   height: 2.5rem;
   box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
@@ -354,6 +419,11 @@ footer .footer-content .newsletter form input[type=email]:not(:-moz-placeholder-
 }
 footer .footer-content .newsletter form input[type=email]:not(:placeholder-shown):invalid + .message {
   display: block;
+}
+@media screen and (max-width: 1050px) {
+  footer .footer-content .newsletter {
+    width: 55%;
+  }
 }
 footer .footer-end {
   display: flex;

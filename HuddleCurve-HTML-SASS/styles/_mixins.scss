@@ -23,6 +23,11 @@
         color: $text-light;
     }
 
+    @media screen and (max-width: 1050px) {
+        h1 { @include title(2rem)}
+        h2 { @include title(1.5rem)}
+    }
+
     p, a{ @include body(400, 1rem)}
 
     .section p,
@@ -62,7 +67,7 @@
     font-family: $text;
     font-weight: 500;
     font-size: 0.9rem;
-    border-radius: 30px;
+    border-radius: 50px;
     width: $width;
     height: $height;
     box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);

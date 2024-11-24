@@ -51,15 +51,23 @@ header {
 
         .header-content {
             @include flex(column);
+            text-align: center;
 
             p {
                 width: 45%;
                 margin-bottom: 2rem;
-                text-align: center;
+
+                @media screen and (max-width: 1050px) {
+                    width: 70%;
+                }
             }
 
             button {
-                @include button(30%, 4rem)
+                @include button(30%, 4rem);
+
+                @media screen and (max-width: 1050px) {
+                    @include button(50%, 3rem);
+                }
             }
         }
 
@@ -76,6 +84,12 @@ header {
             width: 70%;
             @include flex(row);
             text-align: left;
+
+
+            @media screen and (max-width: 1050px) {
+                width: 90%;
+            }
+
         }
     }
 }
@@ -113,6 +127,10 @@ main {
         button {
             @include button(30%, 4rem);
             margin-top: 1rem;
+
+            @media screen and (max-width: 1050px) {
+                @include button(40%, 3rem)
+            }
         }
     }
 }
@@ -138,6 +156,10 @@ footer {
                 margin-right: 1rem;
                 vertical-align: middle;
             }
+
+            @media screen and (max-width: 1050px) {
+                width: 40%;
+            }
         }
 
         .newsletter {
@@ -149,6 +171,11 @@ footer {
 
             form {
                 @include form;
+            }
+
+
+            @media screen and (max-width: 1050px) {
+                width: 55%;
             }
         }
     }
