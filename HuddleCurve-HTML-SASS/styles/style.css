@@ -1,1 +1,170 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "OpenSans";
+  src: url(../assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-SemiBold.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body h1 {
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+body h2 {
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+body h3 {
+  font-family: "Poppins", sans-serif;
+  color: hsl(192, 100%, 9%);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+body p, body a {
+  font-family: "OpenSans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(192, 100%, 9%);
+}
+body .section p,
+body footer p {
+  font-family: "OpenSans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: hsl(192, 100%, 9%);
+}
+body .data {
+  font-family: "OpenSans", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(192, 100%, 9%);
+}
+body .light {
+  font-family: "OpenSans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(192, 100%, 9%);
+  color: rgba(164, 164, 164, 0.918);
+}
+body span {
+  font-family: "OpenSans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: hsl(192, 100%, 9%);
+  color: hsl(0, 100%, 63%);
+}
+body input[type=submit] {
+  border: none;
+  cursor: pointer;
+  background-color: hsl(322, 100%, 66%);
+  color: white;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 1rem;
+  width: auto;
+  font-size: 0.8rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: hsl(322, 100%, 66%);
+  color: white;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 1rem;
+  width: auto;
+}
+
+header {
+  background-image: url(../assets/images/bg-section-top-desktop-1.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  text-align: center;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 3rem 3rem 3rem;
+}
+header nav img {
+  width: 10rem;
+}
+header nav a {
+  border: none;
+  cursor: pointer;
+  background-color: hsl(322, 100%, 66%);
+  color: white;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 1rem;
+  width: auto;
+  background-color: transparent;
+  color: hsl(322, 100%, 66%);
+  text-decoration: none;
+  border: 1px solid hsl(322, 100%, 66%);
+  padding: 0.5rem 2rem;
+  width: auto;
+}
+header .header {
+  padding: 5rem 10rem 15rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header .header-content p {
+  width: 45%;
+  margin-bottom: 2rem;
+}
+header .header .header-content button {
+  border: none;
+  cursor: pointer;
+  background-color: hsl(322, 100%, 66%);
+  color: white;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 1rem;
+  width: 30%;
+}
+header .header .header-image {
+  width: 90%;
+  margin: 5rem 0rem;
+}
+header .header .header-image img {
+  width: 100%;
+}
+header .header .header-data {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}/*# sourceMappingURL=style.css.map */

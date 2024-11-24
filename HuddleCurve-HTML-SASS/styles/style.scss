@@ -1,0 +1,81 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include text;
+    @include form;
+    // background-color: rebeccapurple;
+}
+
+button {
+    @include button;
+}
+
+header {
+    background-image: url(../assets/images/bg-section-top-desktop-1.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    text-align: center;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 3rem 3rem 3rem;
+
+        img {
+            width: 10rem;
+        }
+
+        a {
+            @include button;
+            background-color: transparent;
+            color: $pink;
+            text-decoration: none;
+            border: 1px solid $pink;
+            padding: 0.5rem 2rem;
+            width: auto;
+        }
+    }
+
+    .header {
+        padding: 5rem 10rem 15rem 10rem;
+        @include flex(column);
+
+        .header-content {
+            @include flex(column);
+
+            p {
+                width: 45%;
+                margin-bottom: 2rem;
+            }
+
+            button {
+                @include button(30%)
+            }
+        }
+
+        .header-image {
+            width: 90%;
+            margin: 5rem 0rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .header-data {
+            width: 70%;
+            @include flex(row);
+            text-align: left;
+        }
+    }
+}
