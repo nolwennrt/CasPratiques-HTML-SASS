@@ -21,10 +21,14 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 3rem 3rem 3rem 3rem;
+        padding: 3rem;
 
         img {
             width: 10rem;
+
+            @media screen and (max-width: 767px) {
+                width: 6rem;
+            }
         }
 
         a {
@@ -42,6 +46,15 @@ header {
                 border: 1px solid $lightpink;
                 color: $lightpink;
             }
+
+            @media screen and (max-width: 767px) {
+                font-size: 0.8rem;
+                padding: 0.3rem 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 1rem;
         }
     }
 
@@ -60,6 +73,10 @@ header {
                 @media screen and (max-width: 1050px) {
                     width: 70%;
                 }
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
             }
 
             button {
@@ -68,6 +85,11 @@ header {
                 @media screen and (max-width: 1050px) {
                     @include button(50%, 3rem);
                 }
+
+                @media screen and (max-width: 767px) {
+                    @include button(85%,3rem);
+                }
+                
             }
         }
 
@@ -76,6 +98,10 @@ header {
             margin: 5rem 0rem;
 
             img {
+                width: 100%;
+            }
+
+            @media screen and (max-width: 767px) {
                 width: 100%;
             }
         }
@@ -90,7 +116,27 @@ header {
                 width: 90%;
             }
 
+            @media screen and (max-width: 767px) {
+
+                .data-content {
+                    margin-bottom: 5rem;
+
+                    img {
+                        width: 2rem;
+                    }
+                }
+                
+            }
+
         }
+
+        @media screen and (max-width: 767px) {
+            padding: 5rem 3rem 7rem 3rem;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        background-image: url(../assets/images/bg-section-top-mobile-1.svg);
     }
 }
 
@@ -100,12 +146,21 @@ main {
         &.grow {
             @include section(2rem 10rem);
             background-color: $background;
+
+            @media screen and (max-width: 767px) {
+                @include section (2rem 3rem);
+            }
         }
 
         &.flowing {
             @include section(15rem 10rem);
             background-image: url(../assets/images/bg-section-bottom-desktop-1.svg), url(../assets/images/bg-section-top-desktop-2.svg);
             @include background((top,bottom));
+
+            @media screen and (max-width: 767px) {
+                @include section (15rem 3rem 20rem 3rem);
+                background-image: url(../assets/images/bg-section-bottom-mobile-1.svg), url(../assets/images/bg-section-top-mobile-2.svg);
+            }
 
             .section-content {
                 order: 2;
@@ -115,7 +170,12 @@ main {
         &.users {
             @include section(2rem 10rem);
             background-color: $background;
+
+            @media screen and (max-width: 767px) {
+                @include section (2rem 3rem);
+            }
         }
+
     }
 
     .call-to-action {
@@ -124,12 +184,21 @@ main {
         @include background((top, bottom));
         text-align: center;
 
+        @media screen and (max-width: 767px) {
+            @include section (15rem 3rem 20rem 3rem);
+            background-image: url(../assets/images/bg-section-bottom-mobile-2.svg), url(../assets/images/bg-footer-top-mobile.svg);
+        }
+
         button {
             @include button(30%, 4rem);
             margin-top: 1rem;
 
             @media screen and (max-width: 1050px) {
                 @include button(40%, 3rem)
+            }
+
+            @media screen and (max-width: 767px) {
+                @include button(70%, 3rem)
             }
         }
     }
@@ -160,6 +229,11 @@ footer {
             @media screen and (max-width: 1050px) {
                 width: 40%;
             }
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                order: 2;
+            }
         }
 
         .newsletter {
@@ -177,6 +251,11 @@ footer {
             @media screen and (max-width: 1050px) {
                 width: 55%;
             }
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                margin-bottom: 5rem;
+            }
         }
     }
 
@@ -193,6 +272,10 @@ footer {
                 &:hover {
                     color: cyan;
                 }
+
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 2rem;
+                }
             }
         }
 
@@ -200,6 +283,13 @@ footer {
             margin-right: 1rem;
         }
 
+        @media screen and (max-width: 767px) {
+            align-items: flex-start;
+        }
 
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 2rem 3rem;
     }
 }
