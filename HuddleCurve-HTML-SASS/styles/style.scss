@@ -36,6 +36,12 @@ header {
             border: 1px solid $pink;
             padding: 0.5rem 2rem;
             width: auto;
+
+            &:hover {
+                background-color: transparent;
+                border: 1px solid $lightpink;
+                color: $lightpink;
+            }
         }
     }
 
@@ -153,8 +159,13 @@ footer {
         padding: 5rem 0;
 
         .icon {
+
             i {
                 color: $text-light;
+
+                &:hover {
+                    color: cyan;
+                }
             }
         }
 

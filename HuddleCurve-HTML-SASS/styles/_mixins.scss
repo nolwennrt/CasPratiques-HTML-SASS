@@ -66,6 +66,10 @@
     width: $width;
     height: $height;
     box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
+
+    &:hover {
+        background-color: $lightpink;
+    }
 }
 
 @mixin flex($direction) {
