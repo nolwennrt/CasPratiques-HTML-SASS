@@ -18,7 +18,10 @@
 
     h2 { @include title(2rem)}
 
-    h3 { @include title(1.2rem)}
+    h3 { 
+        @include title(1.2rem);
+        color: $text-light;
+    }
 
     p, a{ @include body(400, 1rem)}
 
@@ -36,9 +39,22 @@
         @include body(400, 0.8rem);
         color : $lightred;
     }
+
+    footer {
+        p {
+            color: $text-light;
+        }
+
+        .attribution {
+            a {
+                @include body(400,0.8rem);
+                color: $text-light;
+            }
+        }
+    }
 }
 
-@mixin button ($width : auto) {
+@mixin button ($width : auto, $height : auto) {
     border: none;
     cursor: pointer;
     background-color: $pink;
@@ -47,8 +63,8 @@
     font-weight: 500;
     font-size: 0.9rem;
     border-radius: 30px;
-    padding: 1rem;
     width: $width;
+    height: $height;
     box-shadow: 0 5px 15px rgba(131, 131, 131, 0.717);
 }
 
@@ -83,9 +99,51 @@
 }
 
 @mixin form {
+    @include flex(row);
+    align-items: flex-start;
+    margin-top: 2rem;
 
-    input[type="submit"] {
-        @include button;
-        font-size: 0.8rem;
+    input {
+        height: 2.5rem;
+        margin-bottom: 0.2rem;
+
+        &::placeholder {
+            color: lightgray;
+        }
+    }
+
+    .input-group {
+        width: 60%;
+
+        input[type="email"] {
+            border: none;
+            width: 100%;
+            padding-left: 1rem;
+            border-radius: 5px;
+        }
+
+        .message {
+            text-align: left;
+            display: none;
+        }
+    }
+
+    .submit {
+        width: 35%;
+
+        input[type="submit"] {
+            @include button(100%, 2.5rem);
+            padding: 0;
+            border-radius: 5px;
+            box-shadow: none;
+        }
+    }
+
+    input[type="email"]:not(:placeholder-shown):invalid {
+        border: 1px solid $lightred;
+    }
+
+    input[type="email"]:not(:placeholder-shown):invalid + .message {
+        display: block;
     }
 }

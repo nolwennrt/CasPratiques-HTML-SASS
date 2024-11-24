@@ -10,7 +10,6 @@
 
 body {
     @include text;
-    @include form;
     // background-color: rebeccapurple;
 }
 
@@ -50,10 +49,11 @@ header {
             p {
                 width: 45%;
                 margin-bottom: 2rem;
+                text-align: center;
             }
 
             button {
-                @include button(30%)
+                @include button(30%, 4rem)
             }
         }
 
@@ -105,9 +105,63 @@ main {
         text-align: center;
 
         button {
-            @include button(30%);
+            @include button(30%, 4rem);
             margin-top: 1rem;
         }
     }
 }
 
+footer {
+    background-color: $text-color;
+    padding: 2rem 10rem;
+    .footer-content {
+        @include section(0);
+
+        .info {
+            width: 25%;
+
+            .logo {
+                width: 10rem;
+            }
+
+            p {
+                margin-top: 1.5rem;
+            }
+
+            img {
+                margin-right: 1rem;
+                vertical-align: middle;
+            }
+        }
+
+        .newsletter {
+            width: 40%;
+
+            p {
+                width: 70%;
+            }
+
+            form {
+                @include form;
+            }
+        }
+    }
+
+    .footer-end {
+        @include flex(row);
+        height: 2.5rem;
+        padding: 5rem 0;
+
+        .icon {
+            i {
+                color: $text-light;
+            }
+        }
+
+        i:not(:nth-child(3)) {
+            margin-right: 1rem;
+        }
+
+
+    }
+}
