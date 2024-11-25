@@ -1,0 +1,15 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+body {
+    background-image: linear-gradient(to left, $gradient);
+}
+
+main {
+    display: none;
+}
+
+footer {
+    display: none;
+}
