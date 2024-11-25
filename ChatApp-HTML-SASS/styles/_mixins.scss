@@ -2,7 +2,7 @@
 
 @mixin bg-image($top : auto, $right: auto, $bottom: auto, $left: auto, $radius) {
     @include gradient(to bottom);
-    position: absolute;
+    position: fixed;
     top: $top;
     right: $right;
     bottom: $bottom;
