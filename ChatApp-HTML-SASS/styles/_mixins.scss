@@ -13,7 +13,7 @@
     z-index: -1;
 }
 
-@mixin text($size : 13px , $weight : 400, $color : $text) {
+@mixin text($size : 11px , $weight : 400, $color : $text) {
     font-family: $text-font;
     font-size: $size;
     font-weight: $weight;
@@ -21,10 +21,10 @@
 }
 
 @mixin bubble($color , $textcolor) {
-    padding: 0.7rem;
+    padding: 0.5rem;
     background-color: $color;
     color: $textcolor;
-    max-width: 67%;
+    max-width: 62%;
     margin-bottom: 0.7rem;
 }
 
