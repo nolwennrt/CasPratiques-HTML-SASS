@@ -18,51 +18,58 @@
     <section class="mockup">
       <div class="screen">
         <div class="screen-header">
-          <i class="fa-solid fa-chevron-left"></i>
-          <img src="assets/images/avatar.jpg" alt="">
-          <p class="bold">Samuel Green<br><span class="light">Available to Walk</span></p>
-          <i class="fa-solid fa-ellipsis-vertical"></i>
+          <div class="dynamic-island"></div>
+          <div class="header-content">
+            <i class="fa-solid fa-chevron-left"></i>
+            <img src="assets/images/avatar.jpg" alt="">
+            <p>Samuel Green<br><span class="light">Available to Walk</span></p>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
         </div>
 
         <div class="screen-chat">
 
-          <div class="chat-bubble">
+          <div class="chat-bubble left">
             <p>That sounds great. I’d be happy with that.</p>
           </div>
 
-          <div class="chat-bubble">
+          <div class="chat-bubble left">
             <p>Could you send over some pictures of your dog, please?</p>
           </div>
 
-          <div class="chat-image">
+          <div class="chat-image right">
             <img src="assets/images/dog-image-1.jpg" alt="">
             <img src="assets/images/dog-image-2.jpg" alt="">
             <img src="assets/images/dog-image-3.jpg" alt="">
           </div>
 
-          <div class="chat-bubble">
+          <div class="chat-bubble right">
             <p>Here are a few pictures. She’s a happy girl!</p>
           </div>
 
-          <div class="chat-bubble">
+          <div class="chat-bubble right">
             <p>Can you make it?</p>
           </div>
 
-          <div class="chat-bubble">
+          <div class="chat-bubble left">
             <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
           </div>
 
-          <div class="price">
-            <i class="fa-regular fa-circle"></i>
-            <p>30 minute walk</p>
-            <span class="bold">$29</span>
-          </div>
+          <form method="get" class="price">
+            <p>
+              <input type="radio" name="price" value="29" id="walk-29">
+              <label for="walk-29">30 minute walk</label>
+              <span class="bold">$29</span>
+            </p>
+          </form>
 
-          <div class="price">
-            <i class="fa-regular fa-circle"></i>
-            <p>1 hour walk</p>
-            <span class="bold">$49</span>
-          </div>
+          <form method="get" class="price">
+            <p>
+              <input type="radio" name="price" value="49" id="walk-49">
+              <label for="walk-49">1 hour walk</label>
+              <span class="bold">$49</span>
+            </p>
+          </form>
 
           <div class="chat-new">
             <p class="light">Type a message…</p>
