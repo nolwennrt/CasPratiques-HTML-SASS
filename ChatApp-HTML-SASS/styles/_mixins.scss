@@ -1,0 +1,20 @@
+@mixin gradient($direction) {background-image: linear-gradient($direction, $gradient);}
+
+@mixin bg-image($top : auto, $right: auto, $bottom: auto, $left: auto, $radius) {
+    @include gradient(to bottom);
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    border-radius: $radius;
+    width: 30rem;
+    height: 45rem;
+}
+
+
+
+
+
+
+
